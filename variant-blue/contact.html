@@ -15,53 +15,28 @@
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <link href="assets/css/lumora.css?v=20260902p2" rel="stylesheet" type="text/css"/>
         <style>
-            /* HERO CONTAINER (Soft Ice-Blue from Image 3 #ddebec, custom width & balanced height) */
-            .contact-hero_container {
-                max-width: 1240px;
-                width: 92%;
-                margin: 32px auto 0;
+            /* CUSTOM CARDS CONTAINER (Soft Ice-Blue from Image 3 #ddebec, custom width & height) */
+            .contact-cards_outer-wrap {
+                margin-top: 48px;
                 background-color: #ddebec;
                 border-radius: 28px;
-                padding: 60px 48px 56px;
+                padding: 44px 36px 40px;
                 border: 1px solid rgba(36, 163, 177, 0.22);
-                box-sizing: border-box;
+                box-shadow: 0 16px 40px rgba(1, 31, 35, 0.04);
             }
             @media (max-width: 991px) {
-                .contact-hero_container {
-                    width: 95%;
-                    padding: 44px 28px 40px;
-                    border-radius: 24px;
+                .contact-cards_outer-wrap {
+                    padding: 32px 24px 28px;
+                    border-radius: 22px;
+                    margin-top: 36px;
                 }
             }
             @media (max-width: 580px) {
-                .contact-hero_container {
-                    width: 95%;
-                    padding: 32px 18px 28px;
-                    border-radius: 20px;
+                .contact-cards_outer-wrap {
+                    padding: 24px 16px 20px;
+                    border-radius: 18px;
+                    margin-top: 28px;
                 }
-            }
-            .contact-hero_head {
-                text-align: center;
-                max-width: 720px;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .contact-hero_title {
-                font-family: 'Sora', sans-serif;
-                font-size: clamp(30px, 3.8vw, 46px);
-                font-weight: 700;
-                color: #011f23;
-                line-height: 1.22;
-                margin-top: 14px;
-                margin-bottom: 12px;
-            }
-            .contact-hero_sub {
-                font-size: 17px;
-                line-height: 1.6;
-                color: #55696b;
-                margin-bottom: 0;
             }
 
             /* 4 CARDS GRID (Exact match from Image 2) */
@@ -69,23 +44,24 @@
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
                 gap: 20px;
-                margin-top: 40px;
             }
             @media (max-width: 991px) {
                 .contact-hero_cards-grid {
                     grid-template-columns: repeat(2, 1fr);
+                    gap: 16px;
                 }
             }
             @media (max-width: 580px) {
                 .contact-hero_cards-grid {
                     grid-template-columns: 1fr;
+                    gap: 14px;
                 }
             }
             .contact-hero_card {
                 background: #ffffff;
                 border: 1px solid rgba(36, 163, 177, 0.16);
                 border-radius: 20px;
-                padding: 30px 24px;
+                padding: 28px 22px;
                 box-shadow: 0 4px 18px rgba(1, 31, 35, 0.03);
                 transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
                 display: flex;
@@ -259,7 +235,7 @@
     </head>
     <body>
         <div class="page-wrapper">
-            <!-- NAVBAR -->
+            <!-- NAVBAR (Exact match with About Page) -->
             <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_wrap w-nav">
                 <div class="navbar_container">
                     <a href="index.html" class="navbar_logo w-nav-brand">
@@ -385,85 +361,153 @@
                 </div>
             </div>
 
-            <!-- MAIN CONTENT -->
+            <!-- MAIN CONTENT WRAPPER -->
             <main class="main-wrapper">
-                <!-- HERO SECTION: Light #ddebec background (from Image 3), balanced height & width, with the 4 cards from Image 2 -->
-                <section class="section_contact-hero" style="padding-top: 10px; padding-bottom: 20px;">
-                    <div class="contact-hero_container">
-                        <div class="contact-hero_head">
-                            <!-- Tag from Image 2 -->
-                            <div data-w-id="ch-tag" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" class="section_tag" style="background: rgba(36, 163, 177, 0.16); border-color: rgba(36, 163, 177, 0.3);">
-                                <div class="icon_wrap is-small" style="color: #24a3b1;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
-                                        <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
-                                    </svg>
+                <!-- HERO SECTION (Upper section RESTORED with SplitText H1, Subtitle, Buttons, and Counter Stats) -->
+                <header class="section_hero">
+                    <div class="section-padding padding-hero bottom-none">
+                        <div class="container">
+                            <div class="section_component">
+                                <div class="margin-bottom margin-56px">
+                                    <div class="about-hero_header">
+                                        <div class="about-hero_content">
+                                            <div data-w-id="contact-tag" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="margin-bottom margin-12px">
+                                                <div class="section_tag">
+                                                    <div class="icon_wrap is-small">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                            <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div>Get In Touch</div>
+                                                </div>
+                                            </div>
+                                            <div class="margin-bottom margin-16px">
+                                                <h1 hero-text-split="">We’re Here for Your <span class="text-highlighted">Skin &amp; Hair</span> Journey</h1>
+                                            </div>
+                                            <div class="margin-bottom margin-32px">
+                                                <p data-w-id="contact-sub" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="about-hero_para">Have questions about clinical dermatology, acne treatments, laser aesthetics, or trichology? Contact Dr. Pallavi Rathi and our specialized medical team at Pranik Chambers, Sakinaka, Mumbai.</p>
+                                            </div>
+                                            <div data-w-id="contact-btns" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="button-container" style="display:flex; gap:16px; flex-wrap:wrap;">
+                                                <a data-wf--button-primary--variant="base" href="tel:+918422990990" class="button_primary w-inline-block">
+                                                    <div class="button_inner">
+                                                        <div class="button-text_wrap">
+                                                            <div class="button_text">Call +91 8422 990 990</div>
+                                                        </div>
+                                                        <div class="button-icon_group">
+                                                            <div class="button-icon_wrap">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="button-icon_wrap is-hover">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a data-wf--button-primary--variant="base" href="https://wa.me/918422990990" target="_blank" class="button_primary w-inline-block">
+                                                    <div class="button_inner">
+                                                        <div class="button-text_wrap">
+                                                            <div class="button_text">Chat on WhatsApp</div>
+                                                        </div>
+                                                        <div class="button-icon_group">
+                                                            <div class="button-icon_wrap">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="button-icon_wrap is-hover">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="w-node-eb4bd012-3a82-28c4-da6a-dffff7cda011-965ec33d" class="about-hero_info">
+                                            <div class="about-hero_info-item">
+                                                <div class="about-hero_info-item_title">
+                                                    <div class="counter_wrapper">
+                                                        <div class="count-number">500m</div>
+                                                    </div>
+                                                </div>
+                                                <div class="about-hero_info-item_text">From Sakinaka Metro</div>
+                                            </div>
+                                            <div class="about-hero_info-item">
+                                                <div class="about-hero_info-item_title">
+                                                    <div class="counter_wrapper">
+                                                        <div class="count-number">25+</div>
+                                                    </div>
+                                                </div>
+                                                <div class="about-hero_info-item_text">Years Clinical Experience</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>Contact Us</div>
+
+                                <!-- CUSTOM CARDS CONTAINER (Soft Ice-Blue #ddebec from Image 3, replacing the dark spammy box from Image 1) -->
+                                <div data-w-id="ch-outer-box" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0);opacity:0" class="contact-cards_outer-wrap">
+                                    <div class="contact-hero_cards-grid">
+                                        <!-- Card 1: CALL US -->
+                                        <a data-w-id="ch-card-1" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" href="tel:+918422990990" class="contact-hero_card">
+                                            <div class="contact-hero_card-icon">
+                                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="contact-hero_card-label">CALL US</div>
+                                            <div class="contact-hero_card-main">+91 8422 990 990</div>
+                                            <div class="contact-hero_card-sub">Mon&ndash;Sat, 11 AM&ndash;9 PM</div>
+                                        </a>
+
+                                        <!-- Card 2: WHATSAPP US -->
+                                        <a data-w-id="ch-card-2" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" href="https://wa.me/918422990990" target="_blank" class="contact-hero_card">
+                                            <div class="contact-hero_card-icon" style="background: rgba(37, 211, 102, 0.12); color: #25D366;">
+                                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="contact-hero_card-label">WHATSAPP US</div>
+                                            <div class="contact-hero_card-main">Chat with our team</div>
+                                            <div class="contact-hero_card-sub">Quick response guaranteed</div>
+                                        </a>
+
+                                        <!-- Card 3: EMAIL US -->
+                                        <a data-w-id="ch-card-3" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" href="mailto:myskinmyhealth@gmail.com" class="contact-hero_card">
+                                            <div class="contact-hero_card-icon">
+                                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                                    <polyline points="22,6 12,13 2,6"/>
+                                                </svg>
+                                            </div>
+                                            <div class="contact-hero_card-label">EMAIL US</div>
+                                            <div class="contact-hero_card-main" style="font-size: 15px;">myskinmyhealth@gmail.com</div>
+                                            <div class="contact-hero_card-sub">We reply within 24 hours</div>
+                                        </a>
+
+                                        <!-- Card 4: VISIT US -->
+                                        <a data-w-id="ch-card-4" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" href="https://maps.google.com/?cid=5170842553753193281" target="_blank" class="contact-hero_card">
+                                            <div class="contact-hero_card-icon">
+                                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                                    <circle cx="12" cy="10" r="3"/>
+                                                </svg>
+                                            </div>
+                                            <div class="contact-hero_card-label">VISIT US</div>
+                                            <div class="contact-hero_card-main">Pranik Chambers, Sakinaka</div>
+                                            <div class="contact-hero_card-sub">Andheri East, Mumbai 400072</div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- Heading from Image 2 -->
-                            <h1 hero-text-split="" class="contact-hero_title">
-                                We're Here Whenever <span class="text-highlighted">You Need Us</span>
-                            </h1>
-                            <!-- Subtitle from Image 2 -->
-                            <p data-w-id="ch-sub" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" class="contact-hero_sub">
-                                Reach us by phone, email, WhatsApp, or walk in &mdash; whichever works best for you.
-                            </p>
-                        </div>
-
-                        <!-- 4 CARDS GRID (Exact match from Image 2) -->
-                        <div class="contact-hero_cards-grid">
-                            <!-- Card 1: CALL US -->
-                            <a data-w-id="ch-card-1" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1);transform:translate3d(0, 25%, 0);opacity:0" href="tel:+918422990990" class="contact-hero_card">
-                                <div class="contact-hero_card-icon">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-hero_card-label">CALL US</div>
-                                <div class="contact-hero_card-main">+91 8422 990 990</div>
-                                <div class="contact-hero_card-sub">Mon&ndash;Sat, 11 AM&ndash;9 PM</div>
-                            </a>
-
-                            <!-- Card 2: WHATSAPP US -->
-                            <a data-w-id="ch-card-2" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1);transform:translate3d(0, 25%, 0);opacity:0" href="https://wa.me/918422990990" target="_blank" class="contact-hero_card">
-                                <div class="contact-hero_card-icon" style="background: rgba(37, 211, 102, 0.12); color: #25D366;">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-hero_card-label">WHATSAPP US</div>
-                                <div class="contact-hero_card-main">Chat with our team</div>
-                                <div class="contact-hero_card-sub">Quick response guaranteed</div>
-                            </a>
-
-                            <!-- Card 3: EMAIL US -->
-                            <a data-w-id="ch-card-3" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1);transform:translate3d(0, 25%, 0);opacity:0" href="mailto:myskinmyhealth@gmail.com" class="contact-hero_card">
-                                <div class="contact-hero_card-icon">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-hero_card-label">EMAIL US</div>
-                                <div class="contact-hero_card-main" style="font-size: 15px;">myskinmyhealth@gmail.com</div>
-                                <div class="contact-hero_card-sub">We reply within 24 hours</div>
-                            </a>
-
-                            <!-- Card 4: VISIT US -->
-                            <a data-w-id="ch-card-4" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1);transform:translate3d(0, 25%, 0);opacity:0" href="https://maps.google.com/?cid=5170842553753193281" target="_blank" class="contact-hero_card">
-                                <div class="contact-hero_card-icon">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                        <circle cx="12" cy="10" r="3"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-hero_card-label">VISIT US</div>
-                                <div class="contact-hero_card-main">Pranik Chambers, Sakinaka</div>
-                                <div class="contact-hero_card-sub">Andheri East, Mumbai 400072</div>
-                            </a>
                         </div>
                     </div>
-                </section>
+                    <div class="hero_gradient"></div>
+                </header>
 
                 <!-- TRANSIT & ACCESSIBILITY SECTION (Matches About Page Section Story & Success) -->
                 <section class="section_story">
@@ -784,6 +828,38 @@
         <script>
             gsap.registerPlugin(ScrollTrigger);
 
+            document.addEventListener("DOMContentLoaded", () => {
+                initCounterAnimations();
+            });
+
+            /* ========== GSAP COUNTER ========== */
+            function initCounterAnimations() {
+                const counters = document.querySelectorAll(".about-hero_info-item_title");
+                counters.forEach((counter) => {
+                    const targetText = counter.textContent.trim();
+                    const targetNumber = parseFloat(targetText.replace(/[^\d.]/g, "")) || 0;
+                    const suffix = targetText.replace(/[\d.,\s]/g, "");
+
+                    gsap.set(counter, { innerText: 0 });
+                    gsap.to(counter, {
+                        innerText: targetNumber,
+                        duration: 3.5,
+                        ease: "power2.out",
+                        snap: { innerText: 1 },
+                        scrollTrigger: {
+                            trigger: counter,
+                            start: "top 85%",
+                            toggleActions: "play none none reset"
+                        },
+                        onUpdate: function() {
+                            const value = Math.ceil(this.targets()[0].innerText);
+                            counter.innerText = value.toLocaleString("en-US") + suffix;
+                        }
+                    });
+                });
+            }
+        </script>
+        <script>
             /* My Skin My Health reveal engine v2, fade/slide reveals replacing IX2 */
             (function () {
                 function runReveals() {
