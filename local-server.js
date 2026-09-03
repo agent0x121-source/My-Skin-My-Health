@@ -108,6 +108,7 @@ if (require.main === module) {
         console.log(`  ⚡ Admin Panel: http://127.0.0.1:${PORT}/admin/index.html`);
         console.log(`  📖 Blog:        http://127.0.0.1:${PORT}/blog.html`);
         console.log(`  📅 Booking:     http://127.0.0.1:${PORT}/booking.html`);
+        console.log(`  📍 Contact:     http://127.0.0.1:${PORT}/contact.html`);
         console.log(`==================================================\n`);
     });
 }
