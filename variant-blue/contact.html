@@ -3,147 +3,142 @@
     <head>
         <meta charset="utf-8"/>
         <title>Contact Us | My Skin My Health - Dr. Pallavi Rathi | Sakinaka, Mumbai</title>
-        <meta content="Contact My Skin My Health (Dr. Pallavi Rathi) in Sakinaka, Mumbai. Get clinic location, directions, phone numbers, WhatsApp, consultation timings, and Google Map." name="description"/>
+        <meta content="Contact My Skin My Health in Sakinaka, Mumbai. Get clinic location, directions, phone numbers, WhatsApp, consultation timings, and transit guide for Dr. Pallavi Rathi." name="description"/>
         <meta content="Contact Us | My Skin My Health - Dr. Pallavi Rathi" property="og:title"/>
         <meta content="Contact My Skin My Health in Sakinaka, Mumbai. Clinic address, phone, directions, and timings for Dr. Pallavi Rathi." property="og:description"/>
         <meta content="assets/img/hero_skin_clinic.jpg" property="og:image"/>
+        <meta content="Contact Us | My Skin My Health - Dr. Pallavi Rathi" name="twitter:title"/>
+        <meta content="Contact My Skin My Health in Sakinaka, Mumbai. Clinic address, phone, directions, and timings for Dr. Pallavi Rathi." name="twitter:description"/>
+        <meta content="assets/img/hero_skin_clinic.jpg" name="twitter:image"/>
         <meta property="og:type" content="website"/>
         <meta content="summary_large_image" name="twitter:card"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <link href="assets/css/lumora.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/lumora.css?v=20260902p2" rel="stylesheet" type="text/css"/>
+        <style>
+            .contact-transit_grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                margin-top: 40px;
+            }
+            @media (max-width: 991px) {
+                .contact-transit_grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media (max-width: 540px) {
+                .contact-transit_grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .transit-box {
+                background: #ffffff;
+                border: 1px solid rgba(36, 163, 177, 0.18);
+                border-radius: 20px;
+                padding: 28px 24px;
+                box-shadow: 0 10px 30px rgba(1, 31, 35, 0.04);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .transit-box:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 18px 40px rgba(36, 163, 177, 0.12);
+            }
+            .transit-badge {
+                display: inline-block;
+                padding: 4px 12px;
+                background: rgba(36, 163, 177, 0.12);
+                color: #24a3b1;
+                font-family: 'Sora', sans-serif;
+                font-size: 13px;
+                font-weight: 600;
+                border-radius: 20px;
+                margin-bottom: 14px;
+                width: fit-content;
+            }
+            .transit-box_title {
+                font-family: 'Sora', sans-serif;
+                font-size: 19px;
+                font-weight: 600;
+                color: #011f23;
+                margin-bottom: 10px;
+            }
+            .transit-box_desc {
+                font-size: 14px;
+                line-height: 1.6;
+                color: #5d6c7b;
+            }
+            .map-lead_layout {
+                display: grid;
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 40px;
+                align-items: start;
+                margin-top: 48px;
+            }
+            @media (max-width: 991px) {
+                .map-lead_layout {
+                    grid-template-columns: 1fr;
+                }
+            }
+            .map-frame_wrap {
+                background: #ffffff;
+                border-radius: 24px;
+                border: 1px solid rgba(36, 163, 177, 0.18);
+                padding: 24px;
+                box-shadow: 0 16px 40px rgba(1, 31, 35, 0.05);
+            }
+            .map-iframe {
+                width: 100%;
+                height: 380px;
+                border: 0;
+                border-radius: 16px;
+            }
+            .map-meta {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+            .map-address-line {
+                font-size: 15px;
+                line-height: 1.6;
+                color: #011f23;
+            }
+            .contact-lead_container .lead-form_card {
+                margin-top: 0;
+                max-width: 100%;
+                box-shadow: 0 20px 60px rgba(2, 47, 52, 0.12);
+                border: 1px solid rgba(36, 163, 177, 0.18);
+            }
+        </style>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect"/>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
         <script type="text/javascript">
             WebFont.load({
                 google: {
-                    families: ["Inter:regular,500,600,700", "Sora:regular,500,600,700"]
+                    families: ["Sora:300,400,500,600,700"]
                 }
             });
         </script>
+        <script type="text/javascript">
+            !function(o, c) {
+                var n = c.documentElement
+                  , t = " w-mod-";
+                n.className += t + "js",
+                ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+            }(window, document);
+        </script>
         <link href="assets/img/favicon.svg" rel="shortcut icon" type="image/x-icon"/>
         <link href="assets/img/webclip.png" rel="apple-touch-icon"/>
-        <style>
-            .contact-cards_grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 24px;
-                margin-top: 32px;
-            }
-            @media (max-width: 991px) {
-                .contact-cards_grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            @media (max-width: 540px) {
-                .contact-cards_grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-            .contact-info_card {
-                background: #ffffff;
-                border-radius: 20px;
-                padding: 32px 24px;
-                border: 1px solid rgba(36, 163, 177, 0.15);
-                box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .contact-info_card:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 12px 30px rgba(36, 163, 177, 0.1);
-            }
-            .contact-card_icon {
-                width: 48px;
-                height: 48px;
-                border-radius: 12px;
-                background: rgba(36, 163, 177, 0.1);
-                color: #24a3b1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-            .contact-card_title {
-                font-family: 'Sora', sans-serif;
-                font-size: 20px;
-                font-weight: 600;
-                color: #011f23;
-                margin-bottom: 12px;
-            }
-            .contact-card_text {
-                font-size: 15px;
-                line-height: 1.6;
-                color: #55696b;
-                margin-bottom: 20px;
-                flex-grow: 1;
-            }
-            .transit_grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 20px;
-                margin-top: 24px;
-            }
-            @media (max-width: 991px) {
-                .transit_grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-            }
-            @media (max-width: 540px) {
-                .transit_grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-            .transit_card {
-                background: #f4fafb;
-                border-radius: 16px;
-                padding: 24px;
-                border: 1px solid rgba(36, 163, 177, 0.12);
-            }
-            .transit_dist {
-                display: inline-block;
-                padding: 4px 10px;
-                background: #24a3b1;
-                color: #ffffff;
-                font-size: 12px;
-                font-weight: 600;
-                border-radius: 20px;
-                margin-bottom: 12px;
-            }
-            .map-form_grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-                margin-top: 40px;
-            }
-            @media (max-width: 991px) {
-                .map-form_grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-            .form-input_field {
-                width: 100%;
-                padding: 14px 18px;
-                border: 1px solid #d1e2e4;
-                border-radius: 12px;
-                font-family: 'Inter', sans-serif;
-                font-size: 15px;
-                margin-bottom: 16px;
-                outline: none;
-                transition: border-color 0.2s;
-                box-sizing: border-box;
-            }
-            .form-input_field:focus {
-                border-color: #24a3b1;
-                box-shadow: 0 0 0 3px rgba(36, 163, 177, 0.15);
-            }
-        </style>
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/ScrollTrigger.min.js"></script>
     </head>
     <body>
         <div class="page-wrapper">
-            <!-- NAVBAR -->
+            <!-- NAVBAR (Exact match with About Page) -->
             <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_wrap w-nav">
                 <div class="navbar_container">
                     <a href="index.html" class="navbar_logo w-nav-brand">
@@ -178,42 +173,55 @@
                                 <nav class="navbar-dropdown_list w-dropdown-list">
                                     <div class="navbar-dropdown_wrapper">
                                         <div class="navbar-dropdown_column">
-                                            <a href="index.html" class="navbar-dropdown_link w-inline-block">
+                                            <a href="index.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
                                                 <div>Home</div>
                                             </a>
-                                            <a href="about.html" class="navbar-dropdown_link w-inline-block">
-                                                <div>About</div>
+                                            <a href="about.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
+                                                <div>About </div>
                                             </a>
-                                            <a href="service.html" class="navbar-dropdown_link w-inline-block">
+                                            <a href="service.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
                                                 <div>Services</div>
                                             </a>
-                                            <a href="about.html#team-members" class="navbar-dropdown_link w-inline-block">
-                                                <div>Doctors &amp; Team</div>
+                                            <a href="service.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
+                                                <div>Services Details</div>
                                             </a>
-                                            <a href="contact.html" class="navbar-dropdown_link w-inline-block w--current">
+                                            <a href="about.html#team-members" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
+                                                <div>Doctor Details</div>
+                                            </a>
+                                            <a href="contact.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block w--current">
                                                 <div>Contact Us</div>
                                             </a>
                                         </div>
                                         <div class="navbar-dropdown_column">
-                                            <a href="blog.html" class="navbar-dropdown_link w-inline-block">
+                                            <a href="blog.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
                                                 <div>Blogs</div>
                                             </a>
-                                            <a href="privacy.html" class="navbar-dropdown_link w-inline-block">
+                                            <a href="blog.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
+                                                <div>Blog Details</div>
+                                            </a>
+                                            <a href="privacy.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
                                                 <div>Privacy Policy</div>
                                             </a>
-                                            <a href="cookies.html" class="navbar-dropdown_link w-inline-block">
+                                            <a href="cookies.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
                                                 <div>Cookies</div>
                                             </a>
-                                            <a href="terms.html" class="navbar-dropdown_link w-inline-block">
-                                                <div>Terms &amp; Conditions</div>
+                                            <a href="404.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
+                                                <div>404</div>
                                             </a>
-                                            <a href="booking.html" class="navbar-dropdown_link w-inline-block">
+                                        </div>
+                                        <div class="navbar-dropdown_column">
+                                            <a href="terms.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
+                                                <div>Terms &amp;Conditions</div>
+                                            </a>
+                                            <a href="booking.html" data-animation="text-flip" class="navbar-dropdown_link w-inline-block">
                                                 <div>Book Online</div>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="navbar-dropdown_bottom">
-                                        <p class="dropdown-info_text">&copy; 2026 My Skin My Health</p>
+                                        <p class="dropdown-info_text">
+                                            &copy; 2026 My Skin My Health
+                                        </p>
                                     </div>
                                 </nav>
                             </div>
@@ -221,13 +229,18 @@
                         <div class="navbar-button_wrapper">
                             <div class="navbar_button hide-mobile">
                                 <div class="button-container">
-                                    <a href="booking.html" class="button_primary w-inline-block">
+                                    <a data-wf--button-primary--variant="light-small" href="booking.html" class="button_primary w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951 w-inline-block">
                                         <div class="button_inner">
                                             <div class="button-text_wrap">
                                                 <div class="button_text">Get Appointment</div>
                                             </div>
-                                            <div class="button-icon_group">
-                                                <div class="button-icon_wrap">
+                                            <div class="button-icon_group w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951">
+                                                <div class="button-icon_wrap w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                        <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="button-icon_wrap w-variant-fb89ee7f-8db1-8e54-55c6-075f0151c951 is-hover">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
                                                         <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
                                                     </svg>
@@ -251,46 +264,95 @@
                 </div>
             </div>
 
-            <!-- MAIN CONTENT -->
+            <!-- MAIN CONTENT WRAPPER -->
             <main class="main-wrapper">
-                <!-- HERO SECTION -->
+                <!-- HERO SECTION (Exact structure & GSAP SplitText of About Page) -->
                 <header class="section_hero">
-                    <div class="section-padding padding-hero">
+                    <div class="section-padding padding-hero bottom-none">
                         <div class="container">
                             <div class="section_component">
-                                <div class="content-align-center">
-                                    <div class="margin-bottom margin-12px">
-                                        <div class="section_tag">
-                                            <div class="icon_wrap is-small">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
-                                                    <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
-                                                </svg>
+                                <div class="margin-bottom margin-56px">
+                                    <div class="about-hero_header">
+                                        <div class="about-hero_content">
+                                            <div data-w-id="contact-tag" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="margin-bottom margin-12px">
+                                                <div class="section_tag">
+                                                    <div class="icon_wrap is-small">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                            <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div>Get In Touch</div>
+                                                </div>
                                             </div>
-                                            <div>Get In Touch</div>
+                                            <div class="margin-bottom margin-16px">
+                                                <h1 hero-text-split="">We’re Here for Your <span class="text-highlighted">Skin &amp; Hair</span> Journey</h1>
+                                            </div>
+                                            <div class="margin-bottom margin-32px">
+                                                <p data-w-id="contact-sub" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="about-hero_para">Have questions about clinical dermatology, acne treatments, laser aesthetics, or trichology? Contact Dr. Pallavi Rathi and our specialized medical team at Pranik Chambers, Sakinaka, Mumbai.</p>
+                                            </div>
+                                            <div data-w-id="contact-btns" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="button-container" style="display:flex; gap:16px; flex-wrap:wrap;">
+                                                <a data-wf--button-primary--variant="base" href="tel:+918422990990" class="button_primary w-inline-block">
+                                                    <div class="button_inner">
+                                                        <div class="button-text_wrap">
+                                                            <div class="button_text">Call +91 8422 990 990</div>
+                                                        </div>
+                                                        <div class="button-icon_group">
+                                                            <div class="button-icon_wrap">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="button-icon_wrap is-hover">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a data-wf--button-primary--variant="base" href="https://wa.me/918422990990" target="_blank" class="button_primary w-inline-block">
+                                                    <div class="button_inner">
+                                                        <div class="button-text_wrap">
+                                                            <div class="button_text">Chat on WhatsApp</div>
+                                                        </div>
+                                                        <div class="button-icon_group">
+                                                            <div class="button-icon_wrap">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="button-icon_wrap is-hover">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="w-node-eb4bd012-3a82-28c4-da6a-dffff7cda011-965ec33d" class="about-hero_info">
+                                            <div class="about-hero_info-item">
+                                                <div class="about-hero_info-item_title">
+                                                    <div class="counter_wrapper">
+                                                        <div class="count-number">500m</div>
+                                                    </div>
+                                                </div>
+                                                <div class="about-hero_info-item_text">From Sakinaka Metro</div>
+                                            </div>
+                                            <div class="about-hero_info-item">
+                                                <div class="about-hero_info-item_title">
+                                                    <div class="counter_wrapper">
+                                                        <div class="count-number">25+</div>
+                                                    </div>
+                                                </div>
+                                                <div class="about-hero_info-item_text">Years Clinical Experience</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="margin-bottom margin-16px">
-                                        <h1 hero-text-split="" class="heading">We’re Here for Your <span class="text-highlighted">Skin &amp; Hair</span> Journey</h1>
-                                    </div>
-                                    <div class="margin-bottom margin-32px">
-                                        <p class="service-hero_para">Have questions about clinical dermatology, acne treatments, laser aesthetics, or trichology? Contact Dr. Pallavi Rathi and our care team at Pranik Chambers, Sakinaka, Mumbai.</p>
-                                    </div>
-                                    <div class="button-container" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                                        <a href="tel:+918422990990" class="button_primary w-inline-block">
-                                            <div class="button_inner">
-                                                <div class="button-text_wrap">
-                                                    <div class="button_text">Call +91 8422 990 990</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="https://wa.me/918422990990" target="_blank" class="button_primary w-inline-block" style="background-color: #25D366; border-color: #25D366;">
-                                            <div class="button_inner">
-                                                <div class="button-text_wrap">
-                                                    <div class="button_text" style="color: #fff;">Chat on WhatsApp</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                </div>
+                                <div data-w-id="13f35a51-6f31-0fc5-cc8d-c0464d8ccc39" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="about-hero_image-wrap">
+                                    <img class="about-hero_image" src="assets/img/hero_skin_clinic_1788416263674.jpg" alt="My Skin My Health Clinic Reception" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1.5, 1.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);" sizes="(max-width: 2320px) 100vw, 2320px" data-w-id="0eb5616a-32aa-f331-47e8-42e10447f18d" loading="lazy"/>
                                 </div>
                             </div>
                         </div>
@@ -298,76 +360,131 @@
                     <div class="hero_gradient"></div>
                 </header>
 
-                <!-- CONTACT CARDS SECTION -->
-                <section class="section_contact-cards">
-                    <div class="section-padding padding-120x120 top-none">
+                <!-- QUICK INFO STRIP (Exact Component from Homepage) -->
+                <div data-w-id="4a010508-9584-456a-0d04-e7cbb6c6bb4f" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="our-info_wrap">
+                    <div class="section-padding">
                         <div class="container">
-                            <div class="contact-cards_grid">
-                                <!-- Card 1: Phone -->
-                                <div class="contact-info_card">
-                                    <div>
-                                        <div class="contact-card_icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                            </svg>
+                            <div class="section_component">
+                                <div class="our-info_list">
+                                    <div class="our-info_item">
+                                        <div class="our-info_item-header">
+                                            <div class="our-info_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 40 40" fill="none" vector-effect="non-scaling-stroke">
+                                                    <path d="M35.625 21.875H35.4231L32.4594 14.465C32.2292 13.8837 31.8292 13.3854 31.3116 13.0348C30.7939 12.6843 30.1827 12.4979 29.5575 12.5H25V11.875C24.999 11.0465 24.6694 10.2522 24.0836 9.66639C23.4978 9.08055 22.7035 8.75099 21.875 8.75H16.25V8.125C16.25 7.2962 15.9208 6.50134 15.3347 5.91529C14.7487 5.32924 13.9538 5 13.125 5C12.2962 5 11.5013 5.32924 10.9153 5.91529C10.3292 6.50134 10 7.2962 10 8.125V8.75H4.375C3.5465 8.75099 2.75222 9.08055 2.16639 9.66639C1.58055 10.2522 1.25099 11.0465 1.25 11.875V28.125C1.25099 28.9535 1.58055 29.7478 2.16639 30.3336C2.75222 30.9194 3.5465 31.249 4.375 31.25H6.925C7.07444 32.2905 7.594 33.2423 8.3884 33.9308C9.18281 34.6193 10.1988 34.9982 11.25 34.9982C12.3012 34.9982 13.3172 34.6193 14.1116 33.9308C14.906 33.2423 15.4256 32.2905 15.575 31.25H26.925C27.0744 32.2905 27.594 33.2423 28.3884 33.9308C29.1828 34.6193 30.1988 34.9982 31.25 34.9982C32.3012 34.9982 33.3172 34.6193 34.1116 33.9308C34.906 33.2423 35.4256 32.2905 35.575 31.25H36.875C37.3723 31.25 37.8492 31.0525 38.2008 30.7008C38.5525 30.3492 38.75 29.8723 38.75 29.375V25C38.749 24.1715 38.4194 23.3772 37.8336 22.7914C37.2478 22.2056 36.4535 21.876 35.625 21.875ZM29.5575 13.75C29.9325 13.7487 30.2992 13.8605 30.6097 14.0708C30.9202 14.281 31.1601 14.58 31.2981 14.9288L34.0769 21.875H25V13.75H29.5575Z" fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <h2 class="our-info_title">Direct Phone Desk</h2>
                                         </div>
-                                        <h3 class="contact-card_title">Direct Phone Desk</h3>
-                                        <p class="contact-card_text">Speak directly with our clinic front desk for fast consultations and booking.</p>
+                                        <div class="our-info_item-body">
+                                            <a href="tel:+918422990990" class="our-info_item-link w-inline-block">
+                                                <div class="our-info_item-para">Call: +91 8422 990 990</div>
+                                            </a>
+                                            <a href="tel:+919930905011" class="our-info_item-link w-inline-block">
+                                                <div class="our-info_item-para">Alt: +91 99309 05011</div>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <a href="tel:+918422990990" style="display: block; font-weight: 600; color: #24a3b1; font-size: 16px; margin-bottom: 4px;">+91 8422 990 990</a>
-                                        <a href="tel:+919930905011" style="display: block; font-weight: 500; color: #55696b; font-size: 14px;">+91 99309 05011</a>
+                                    <div class="our-info_item">
+                                        <div class="our-info_item-header">
+                                            <div class="our-info_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 40 40" fill="none" vector-effect="non-scaling-stroke">
+                                                    <path d="M20 2C10.06 2 2 10.06 2 20C2 23.18 2.83 26.17 4.28 28.77L2.1 36.72L10.27 34.58C12.78 35.95 15.65 36.73 20 36.73C29.94 36.73 38 28.67 38 18.73C38 8.8 29.94 2 20 2ZM20 33.73C16.14 33.73 13.52 32.78 11.27 31.44L10.74 31.12L5.91 32.39L7.2 27.69L6.85 27.13C5.38 24.8 4.6 22.06 4.6 19.19C4.6 10.7 11.51 3.79 20 3.79C28.49 3.79 35.4 10.7 35.4 19.19C35.4 27.68 28.49 33.73 20 33.73Z" fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <h2 class="our-info_title">WhatsApp Fast Desk</h2>
+                                        </div>
+                                        <div class="our-info_item-body">
+                                            <a href="https://wa.me/918422990990" target="_blank" class="our-info_item-link w-inline-block">
+                                                <div class="our-info_item-para">Chat: +91 8422 990 990</div>
+                                            </a>
+                                            <a href="mailto:myskinmyhealth@gmail.com" class="our-info_item-link w-inline-block">
+                                                <div class="our-info_item-para">Email: myskinmyhealth@gmail.com</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="our-info_item is-last">
+                                        <div class="our-info_item-header">
+                                            <div class="our-info_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 40 40" fill="none" vector-effect="non-scaling-stroke">
+                                                    <path d="M20 0.9375C9.48875 0.9375 0.9375 9.48875 0.9375 20C0.9375 30.5106 9.48875 39.0625 20 39.0625C30.5106 39.0625 39.0625 30.5106 39.0625 20C39.0625 9.48875 30.5106 0.9375 20 0.9375ZM20 37.1875C10.5225 37.1875 2.8125 29.4769 2.8125 20C2.8125 10.5225 10.5225 2.8125 20 2.8125C29.4769 2.8125 37.1875 10.5225 37.1875 20C37.1875 29.4769 29.4769 37.1875 20 37.1875Z" fill="currentColor"></path>
+                                                    <path d="M27.0588 23.5636L20.9375 19.4967V7.48047C20.9375 6.96234 20.5181 6.54297 20 6.54297C19.4819 6.54297 19.0625 6.96234 19.0625 7.48047V19.603L10.3788 28.0155C10.0069 28.3755 9.99752 28.9686 10.3575 29.3411C10.5413 29.5311 10.7863 29.6261 11.0306 29.6261C11.2656 29.6261 11.5006 29.538 11.6831 29.3617L20.11 21.198L26.0213 25.1242C26.1813 25.2305 26.3613 25.2811 26.5394 25.2811C26.8425 25.2811 27.1406 25.1342 27.3206 24.8623C27.6075 24.4317 27.49 23.8498 27.0588 23.5636Z" fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <h2 class="our-info_title">Service Timings</h2>
+                                        </div>
+                                        <div class="our-info_item-body">
+                                            <div class="our-info_item-para">Mon – Sat: 11:00 AM – 9:00 PM</div>
+                                            <div class="our-info_item-para">Sunday: 11:00 AM – 2:00 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRANSIT & ACCESSIBILITY SECTION (Matches About Page Section Story & Success) -->
+                <section class="section_story">
+                    <div class="section-padding padding-120x120">
+                        <div class="container">
+                            <div class="section_component">
+                                <div class="about-story_content">
+                                    <div class="content-align-center">
+                                        <div data-w-id="transit-tag" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="margin-bottom margin-12px">
+                                            <div class="section_tag">
+                                                <div class="icon_wrap is-small">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                        <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>Transit &amp; Distance Guide</div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-bottom margin-16px">
+                                            <h2 data-w-id="transit-heading" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="heading-custom-h3">
+                                                How to Reach <span class="text-highlighted">Our Clinic</span> with Ease
+                                            </h2>
+                                        </div>
+                                        <div class="margin-bottom margin-32px">
+                                            <div class="about-story_para">
+                                                <p data-w-id="transit-para" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="body-text-18px">Located directly on Saki Vihar Road at Pranik Chambers, Sakinaka, Andheri East with seamless metro, airport, and railway connectivity.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <!-- Card 2: WhatsApp Desk -->
-                                <div class="contact-info_card">
-                                    <div>
-                                        <div class="contact-card_icon" style="background: rgba(37, 211, 102, 0.1); color: #25D366;">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
-                                            </svg>
+                                <!-- 4 Transit Cards -->
+                                <div class="contact-transit_grid">
+                                    <div data-w-id="transit-c1" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="transit-box">
+                                        <div>
+                                            <div class="transit-badge">500m &bull; 5 Min Walk</div>
+                                            <h3 class="transit-box_title">🚇 Sakinaka Metro Station</h3>
+                                            <p class="transit-box_desc">Metro Line 1 (Versova &ndash; Andheri &ndash; Ghatkopar). Just a 5-minute walk or a 2-minute auto rickshaw ride along Saki Vihar Road.</p>
                                         </div>
-                                        <h3 class="contact-card_title">WhatsApp Desk</h3>
-                                        <p class="contact-card_text">Quick inquiry, treatment queries, prescription renewals &amp; instant assistance.</p>
                                     </div>
-                                    <div>
-                                        <a href="https://wa.me/918422990990" target="_blank" style="display: inline-block; font-weight: 600; color: #25D366; font-size: 15px;">Message +91 8422 990 990 &rarr;</a>
-                                    </div>
-                                </div>
 
-                                <!-- Card 3: Email Desk -->
-                                <div class="contact-info_card">
-                                    <div>
-                                        <div class="contact-card_icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                                <polyline points="22,6 12,13 2,6"/>
-                                            </svg>
+                                    <div data-w-id="transit-c2" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="transit-box">
+                                        <div>
+                                            <div class="transit-badge">2.2 KM &bull; 8-10 Mins</div>
+                                            <h3 class="transit-box_title">✈️ Mumbai Airport (T2)</h3>
+                                            <p class="transit-box_desc">Chhatrapati Shivaji Maharaj International Airport (Terminal 2). Extremely close via Andheri-Kurla / Saki Vihar Road corridor.</p>
                                         </div>
-                                        <h3 class="contact-card_title">Email Support</h3>
-                                        <p class="contact-card_text">Send medical records, diagnostic reports, and comprehensive queries.</p>
                                     </div>
-                                    <div>
-                                        <a href="mailto:myskinmyhealth@gmail.com" style="display: block; font-weight: 600; color: #24a3b1; font-size: 15px; word-break: break-all;">myskinmyhealth@gmail.com</a>
-                                    </div>
-                                </div>
 
-                                <!-- Card 4: Timings -->
-                                <div class="contact-info_card">
-                                    <div>
-                                        <div class="contact-card_icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <circle cx="12" cy="12" r="10"/>
-                                                <polyline points="12 6 12 12 16 14"/>
-                                            </svg>
+                                    <div data-w-id="transit-c3" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="transit-box">
+                                        <div>
+                                            <div class="transit-badge">4.0 KM &bull; Direct Metro</div>
+                                            <h3 class="transit-box_title">🚆 Andheri Railway Station</h3>
+                                            <p class="transit-box_desc">Western &amp; Harbour suburban railway lines. Direct single-line metro transfer from Andheri Station straight to Sakinaka.</p>
                                         </div>
-                                        <h3 class="contact-card_title">Clinic Timings</h3>
-                                        <p class="contact-card_text">Convenient morning, afternoon &amp; evening appointment slots available.</p>
                                     </div>
-                                    <div>
-                                        <div style="font-size: 14px; color: #011f23; font-weight: 600;">Mon &ndash; Sat: <span style="font-weight: 400; color: #55696b;">11:00 AM &ndash; 9:00 PM</span></div>
-                                        <div style="font-size: 14px; color: #011f23; font-weight: 600; margin-top: 4px;">Sunday: <span style="font-weight: 400; color: #55696b;">11:00 AM &ndash; 2:00 PM</span></div>
+
+                                    <div data-w-id="transit-c4" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="transit-box">
+                                        <div>
+                                            <div class="transit-badge">Key Landmark</div>
+                                            <h3 class="transit-box_title">📍 Opp. H.P. Petrol Pump</h3>
+                                            <p class="transit-box_desc">Unit No. A 407/408, A Wing, Pranik Chambers, Saki Vihar Road, Sag Baug, Marol, Sakinaka, Mumbai, Maharashtra 400072.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -375,185 +492,197 @@
                     </div>
                 </section>
 
-                <!-- HOW TO REACH OUR CLINIC (TRANSIT & DIRECTIONS) -->
-                <section class="section_directions" style="background-color: #f7fcfa;">
-                    <div class="section-padding padding-120x120">
+                <!-- MAP & INTERACTIVE APPOINTMENT CONSULTATION SECTION (Matches About Page section_location) -->
+                <section class="section_location">
+                    <div class="section-padding padding-120x120 bottom-none">
                         <div class="container">
-                            <div class="content-align-center">
-                                <div class="margin-bottom margin-12px">
-                                    <div class="section_tag">
-                                        <div class="icon_wrap is-small">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
-                                                <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
-                                            </svg>
+                            <div class="section_component">
+                                <div class="margin-bottom margin-56px">
+                                    <div class="location_header">
+                                        <div data-w-id="loc-tag" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="margin-bottom margin-12px">
+                                            <div class="section_tag">
+                                                <div class="icon_wrap is-small">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                        <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                                <div>Visit &amp; Book Consultation</div>
+                                            </div>
                                         </div>
-                                        <div>Transit &amp; Accessibility</div>
+                                        <div class="margin-bottom margin-16px">
+                                            <h2 data-w-id="loc-title" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0">
+                                                Find Our Clinic &amp; <span class="text-highlighted">Schedule Your Visit</span>
+                                            </h2>
+                                        </div>
+                                        <div class="location-header_para-wrap">
+                                            <p data-w-id="loc-para" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="location-header_para">Find us in Pranik Chambers, Saki Vihar Road — open Monday to Saturday till 9 PM and Sunday till 2 PM.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <h2 class="heading-custom-h3">How to Reach <span class="text-highlighted">Our Clinic</span></h2>
-                                <p class="body-text-18px" style="max-width: 680px; margin: 16px auto 0;">Centrally situated on Saki Vihar Road in Sakinaka, Andheri East, Mumbai with immediate transit access from metro, airport, and railway networks.</p>
-                            </div>
 
-                            <div class="transit_grid">
-                                <!-- Transit 1: Metro -->
-                                <div class="transit_card">
-                                    <div class="transit_dist">~500 Meters</div>
-                                    <h4 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23; margin-bottom: 8px;">🚇 Sakinaka Metro Station</h4>
-                                    <p style="font-size: 14px; color: #55696b; line-height: 1.5;">Line 1 (Versova-Andheri-Ghatkopar). Just a 5-minute walk or a 2-minute auto rickshaw ride along Saki Vihar Road.</p>
-                                </div>
+                                <!-- 2 Column Layout: Interactive Map + Theme Lead Form Card -->
+                                <div class="map-lead_layout">
+                                    <!-- Left: Google Map Card -->
+                                    <div data-w-id="map-col" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="map-frame_wrap">
+                                        <iframe 
+                                            class="map-iframe"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0270564568016!2d72.8850616!3d19.1064619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87042bebe59%3A0x47b99c7ea0199921!2sPranik%20Chambers!5e0!3m2!1sen!2sin!4v1709470000000!5m2!1sen!2sin" 
+                                            allowfullscreen="" 
+                                            loading="lazy" 
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                        <div class="map-meta">
+                                            <div class="map-address-line">
+                                                <strong>My Skin My Health &bull; Dr. Pallavi Rathi</strong><br/>
+                                                Unit No. A 407/408, A Wing, Pranik Chambers, Opp. H.P. Petrol Pump, Saki Vihar Road, Sag Baug, Marol, Sakinaka, Mumbai 400072
+                                            </div>
+                                            <div class="button-container" style="margin-top: 10px;">
+                                                <a data-wf--button-primary--variant="base" href="https://maps.google.com/?cid=5170842553753193281" target="_blank" class="button_primary w-inline-block">
+                                                    <div class="button_inner">
+                                                        <div class="button-text_wrap">
+                                                            <div class="button_text">Open In Google Maps</div>
+                                                        </div>
+                                                        <div class="button-icon_group">
+                                                            <div class="button-icon_wrap">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="button-icon_wrap is-hover">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                <!-- Transit 2: Airport -->
-                                <div class="transit_card">
-                                    <div class="transit_dist">~2.2 KM</div>
-                                    <h4 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23; margin-bottom: 8px;">✈️ Mumbai Airport (T2)</h4>
-                                    <p style="font-size: 14px; color: #55696b; line-height: 1.5;">Chhatrapati Shivaji Maharaj International Airport (Terminal 2). Approx 8–10 minutes via Andheri-Kurla / Saki Vihar Road.</p>
-                                </div>
-
-                                <!-- Transit 3: Railway -->
-                                <div class="transit_card">
-                                    <div class="transit_dist">~4.0 KM</div>
-                                    <h4 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23; margin-bottom: 8px;">🚆 Andheri Railway Station</h4>
-                                    <p style="font-size: 14px; color: #55696b; line-height: 1.5;">Direct suburban rail connectivity (Western &amp; Harbour Lines). Easily accessible via metro from Andheri to Sakinaka.</p>
-                                </div>
-
-                                <!-- Transit 4: Landmark -->
-                                <div class="transit_card">
-                                    <div class="transit_dist">Key Landmark</div>
-                                    <h4 style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23; margin-bottom: 8px;">📍 Opposite H.P. Petrol Pump</h4>
-                                    <p style="font-size: 14px; color: #55696b; line-height: 1.5;">Pranik Chambers, A-Wing (Units 407/408), Saki Vihar Road, Sag Baug, Marol, Sakinaka, Mumbai 400072.</p>
+                                    <!-- Right: Theme Native Lead Form Card -->
+                                    <div data-w-id="form-col" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="contact-lead_container">
+                                        <div class="lead-form_card">
+                                            <div class="lead-form_head">
+                                                <div class="lead-form_title">Book Consultation / Callback</div>
+                                                <div class="lead-form_sub">Dr. Pallavi Rathi’s clinic desk calls back within 10 minutes</div>
+                                            </div>
+                                            <form class="lead-form" onsubmit="return lumoraLead(event)">
+                                                <input class="lead-form_input" type="text" name="name" placeholder="Your Full Name" required="">
+                                                <input class="lead-form_input" type="tel" name="phone" placeholder="Phone Number (e.g. 9876543210)" required="">
+                                                <input class="lead-form_input" type="text" name="service" placeholder="Concern: Skin, Acne, Hair Fall, Lasers, etc.">
+                                                <button class="lead-form_btn" type="submit">Request Priority Callback &rarr;</button>
+                                                <div class="lead-form_note">No spam. A real clinic coordinator calls you back, fast.</div>
+                                            </form>
+                                            <div class="lead-form_success" style="display:none">
+                                                <div class="lead-form_title">Thanks! You're all set.</div>
+                                                <div class="lead-form_sub">Dr. Pallavi Rathi’s team will call you within 10 minutes.</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- INTERACTIVE MAP & APPOINTMENT INQUIRY FORM -->
-                <section class="section_map_form">
-                    <div class="section-padding padding-120x120">
+                <!-- CTA SECTION (Exact match from About Page) -->
+                <section class="section_cta">
+                    <div class="section-padding padding-100x100">
                         <div class="container">
-                            <div class="map-form_grid">
-                                <!-- LEFT: Interactive Map & Clinic Address Details -->
-                                <div>
-                                    <div class="margin-bottom margin-12px">
-                                        <div class="section_tag">
+                            <div class="section_component">
+                                <div class="cta_element">
+                                    <div class="cta_content">
+                                        <div data-w-id="875ac5c5-fc76-0575-598a-0f09e52c4247" class="cta_tag">
                                             <div class="icon_wrap is-small">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
                                                     <path d="M12 5.45455H7.31455L10.6255 2.14364L9.85636 1.37455L6.54545 4.68545V0H5.45455V4.68545L2.14364 1.37455L1.37455 2.14364L4.68545 5.45455H0V6.54545H4.68545L1.37455 9.85636L2.14364 10.6255L5.45455 7.31455V12H6.54545V7.31455L9.85636 10.6255L10.6255 9.85636L7.31455 6.54545H12V5.45455Z" fill="currentColor"></path>
                                                 </svg>
                                             </div>
-                                            <div>Location &amp; Directions</div>
+                                            <div>Get In Touch</div>
                                         </div>
+                                        <h2 data-w-id="875ac5c5-fc76-0575-598a-0f09e52c424d">
+                                            Let’s Talk Skin &amp; Hair, We’re <span class="text-highlighted">Just a Consultation Away</span>
+                                        </h2>
+                                        <p data-w-id="875ac5c5-fc76-0575-598a-0f09e52c424f" class="text-color-light">Your health journey starts with one simple step, we’re here to guide you.</p>
                                     </div>
-                                    <h3 style="font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 600; color: #011f23; margin-bottom: 16px;">Visit Our Mumbai Clinic</h3>
-                                    <p style="font-size: 16px; color: #55696b; line-height: 1.6; margin-bottom: 24px;">
-                                        <strong>My Skin My Health</strong><br/>
-                                        Unit No. A 407/408, A Wing, Pranik Chambers,<br/>
-                                        Opp. H.P. Petrol Pump, Saki Vihar Road, Sag Baug,<br/>
-                                        Marol, Sakinaka, Mumbai, Maharashtra 400072
-                                    </p>
-                                    
-                                    <!-- Google Map Iframe -->
-                                    <div style="border-radius: 16px; overflow: hidden; border: 1px solid #d1e2e4; box-shadow: 0 4px 20px rgba(0,0,0,0.05); height: 350px;">
-                                        <iframe 
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0270564568016!2d72.8850616!3d19.1064619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87042bebe59%3A0x47b99c7ea0199921!2sPranik%20Chambers!5e0!3m2!1sen!2sin!4v1709470000000!5m2!1sen!2sin" 
-                                            width="100%" 
-                                            height="100%" 
-                                            style="border:0;" 
-                                            allowfullscreen="" 
-                                            loading="lazy" 
-                                            referrerpolicy="no-referrer-when-downgrade">
-                                        </iframe>
-                                    </div>
-                                    
-                                    <div style="margin-top: 20px;">
-                                        <a href="https://maps.google.com/?cid=5170842553753193281" target="_blank" class="button_primary w-inline-block">
+                                    <div data-w-id="875ac5c5-fc76-0575-598a-0f09e52c4251" class="button-container">
+                                        <a data-wf--button-primary--variant="light" href="booking.html" class="button_primary w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec w-inline-block">
                                             <div class="button_inner">
                                                 <div class="button-text_wrap">
-                                                    <div class="button_text">Open in Google Maps &rarr;</div>
+                                                    <div class="button_text">Get Started</div>
+                                                </div>
+                                                <div class="button-icon_group w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec">
+                                                    <div class="button-icon_wrap">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                            <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="button-icon_wrap is-hover">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                            <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-
-                                <!-- RIGHT: Interactive Inquiry Form -->
-                                <div style="background: #ffffff; border-radius: 24px; padding: 40px 32px; border: 1px solid rgba(36, 163, 177, 0.18); box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
-                                    <h3 style="font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 600; color: #011f23; margin-bottom: 8px;">Request a Consultation</h3>
-                                    <p style="font-size: 15px; color: #55696b; margin-bottom: 24px;">Fill out the form below and Dr. Pallavi Rathi’s clinic desk will connect with you shortly.</p>
-                                    
-                                    <form id="clinicContactForm" onsubmit="event.preventDefault(); submitInquiry();">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 600; color: #011f23; margin-bottom: 6px;">Your Full Name *</label>
-                                            <input type="text" id="contactName" required placeholder="e.g. Ananya Sharma" class="form-input_field"/>
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 600; color: #011f23; margin-bottom: 6px;">Phone Number *</label>
-                                            <input type="tel" id="contactPhone" required placeholder="+91 98765 43210" class="form-input_field"/>
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 600; color: #011f23; margin-bottom: 6px;">Service Required</label>
-                                            <select id="contactService" class="form-input_field" style="background-color: #fff;">
-                                                <option value="Medical Dermatology & Acne">Medical Dermatology &amp; Acne Care</option>
-                                                <option value="Laser Skin Treatment & Toning">Laser Skin Treatment &amp; Toning</option>
-                                                <option value="Hair Fall & PRP Therapy">Hair Fall &amp; PRP Therapy</option>
-                                                <option value="Aesthetic & Anti-Ageing Solutions">Aesthetic &amp; Anti-Ageing Solutions</option>
-                                                <option value="Medi-Facials & Chemical Peels">Medi-Facials &amp; Chemical Peels</option>
-                                                <option value="General Consultation">General Skin &amp; Hair Consultation</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 600; color: #011f23; margin-bottom: 6px;">Message / Questions</label>
-                                            <textarea id="contactMessage" rows="3" placeholder="Tell us briefly about your skin or hair concerns..." class="form-input_field" style="resize: vertical;"></textarea>
-                                        </div>
-                                        <button type="submit" class="button_primary" style="width: 100%; border: none; cursor: pointer; padding: 16px; border-radius: 12px;">
-                                            <div class="button_inner" style="justify-content: center;">
-                                                <div class="button-text_wrap">
-                                                    <div class="button_text">Send Inquiry &amp; Request Callback</div>
-                                                </div>
-                                            </div>
-                                        </button>
-                                        <div id="contactFormStatus" style="margin-top: 16px; font-size: 14px; text-align: center; display: none;"></div>
-                                    </form>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="cta-overlay-wrap">
+                        <div class="cta_overlay is-bottom-right"></div>
+                        <div class="cta_overlay is-top-right"></div>
                     </div>
                 </section>
             </main>
 
-            <!-- FOOTER -->
+            <!-- FOOTER (Exact match from About Page) -->
             <footer class="section_footer">
                 <div class="section-padding">
                     <div class="container">
-                        <div class="footer_header">
-                            <a href="index.html" class="footer_brand w-inline-block">
+                        <div data-w-id="a1b41f4f-e78b-52e6-2492-2ff9a80f251e" class="footer_header">
+                            <a id="w-node-_69a072d1-69e6-8783-2548-858b3e84bf4f-4af74ce9" href="index.html" class="footer_brand w-inline-block">
                                 <img src="assets/img/lumora-logo-dark.svg" loading="lazy" alt="My Skin My Health logo" class="brand_logo"/>
                             </a>
                             <div class="footer-contact_wrap">
                                 <a href="tel:+918422990990" class="footer-contact_link w-inline-block">
                                     <div>+91 8422 990 990</div>
                                 </a>
-                                <a href="mailto:myskinmyhealth@gmail.com" class="footer-contact_link w-inline-block">
+                                <a href="mailto:myskinmyhealth@gmail.com?subject=Support" class="footer-contact_link w-inline-block">
                                     <div>myskinmyhealth@gmail.com</div>
                                 </a>
                             </div>
                         </div>
-                        <div class="footer_element">
+                        <div data-w-id="62445903-4aac-6534-d392-fbc69f50ef16" class="footer_element">
                             <div class="footer_info">
                                 <div class="margin-bottom margin-24px">
                                     <div class="footer-info_para-wrap">
                                         <p class="footer-info_para">Advanced dermatological technology, a caring medical team, and evidence-based treatments designed to keep your skin and hair healthy for life.</p>
                                     </div>
                                 </div>
-                                <a href="booking.html" class="button_primary w-inline-block">
+                                <a data-wf--button-primary--variant="light" href="booking.html" class="button_primary w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec w-inline-block">
                                     <div class="button_inner">
                                         <div class="button-text_wrap">
                                             <div class="button_text">Get Appointment</div>
                                         </div>
+                                        <div class="button-icon_group w-variant-62db4792-8717-dbe8-e811-0d36eb02f9ec">
+                                            <div class="button-icon_wrap">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="button-icon_wrap is-hover">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 12 12" fill="none" vector-effect="non-scaling-stroke" preserveAspectRatio="none">
+                                                    <path d="M4.70139 0.75L10.5303 0.750201L10.5303 6.55165M0.530334 10.75L10.2896 0.990932" stroke="currentColor" stroke-width="1.5"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="footer_menu">
+                            <div id="w-node-_90aa065e-2d95-4aa8-f2ac-04b04859c2d0-4af74ce9" class="footer_menu">
                                 <div class="footer-links-column">
                                     <div class="footer-menu_title">Navigation</div>
                                     <div class="footer-menu_link-wrap">
@@ -561,16 +690,16 @@
                                         <a href="about.html" class="footer-menu_link w-inline-block"><div>About Us</div></a>
                                         <a href="service.html" class="footer-menu_link w-inline-block"><div>Services</div></a>
                                         <a href="blog.html" class="footer-menu_link w-inline-block"><div>Blog</div></a>
-                                        <a href="contact.html" class="footer-menu_link w-inline-block w--current"><div>Contact Us</div></a>
+                                        <a href="contact.html" aria-current="page" class="footer-menu_link w-inline-block w--current"><div>Contact Us</div></a>
                                     </div>
                                 </div>
                                 <div class="footer-links-column">
                                     <div class="footer-menu_title">Services</div>
                                     <div class="footer-menu_link-wrap">
                                         <a href="service.html" class="footer-menu_link w-inline-block"><div>Medical Dermatology</div></a>
-                                        <a href="service.html" class="footer-menu_link w-inline-block"><div>Laser Treatments</div></a>
+                                        <a href="service.html" class="footer-menu_link w-inline-block"><div>Laser Toning</div></a>
                                         <a href="service.html" class="footer-menu_link w-inline-block"><div>Hair Fall &amp; PRP</div></a>
-                                        <a href="service.html" class="footer-menu_link w-inline-block"><div>Aesthetic Solutions</div></a>
+                                        <a href="service.html" class="footer-menu_link w-inline-block"><div>Aesthetic Care</div></a>
                                     </div>
                                 </div>
                                 <div class="footer-links-column">
@@ -583,33 +712,164 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer-bottom">
-                            <div class="footer-bottom_text">&copy; 2026 My Skin My Health. All rights reserved. Dr. Pallavi Rathi, Sakinaka, Mumbai.</div>
+                        <div data-w-id="c179c474-dbf0-a107-6eba-5d7b4af74d6f" class="footer_bottom">
+                            <div class="footer-bottom_element">
+                                <div class="text-color-dark">
+                                    &copy; 2026 My Skin My Health. Dr. Pallavi Rathi, Sakinaka, Mumbai.
+                                </div>
+                                <div class="footer-bottom_right">
+                                    <div class="text-color-dark">&copy; 2026 My Skin My Health</div>
+                                    <div class="footer-bottom_right-divider"></div>
+                                    <a href="privacy.html" class="footer-menu_link w-inline-block">
+                                        <div>Privacy Policy</div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
 
+        <!-- SCRIPTS & INTERACTION ENGINE (Exact match from About Page) -->
+        <script src="assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
+        <script src="assets/js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript"></script>
+        <script src="assets/js/webflow.schunk.5e71080783712679.js" type="text/javascript"></script>
+        <script src="assets/js/webflow.c9187143.3b5f57f78ed8e3cc.js" type="text/javascript"></script>
+        <script src="assets/js/gsap.min.js" type="text/javascript"></script>
+        <script src="assets/js/SplitText.min.js" type="text/javascript"></script>
+        <script src="assets/js/ScrollTrigger.min.js" type="text/javascript"></script>
         <script>
-            function submitInquiry() {
-                var name = document.getElementById('contactName').value;
-                var phone = document.getElementById('contactPhone').value;
-                var service = document.getElementById('contactService').value;
-                var msg = document.getElementById('contactMessage').value;
-                var status = document.getElementById('contactFormStatus');
-                
-                var waText = "Hello My Skin My Health, I'm " + name + " (" + phone + "). I would like to inquire about: " + service + ". " + (msg ? "Note: " + msg : "");
-                var waUrl = "https://wa.me/918422990990?text=" + encodeURIComponent(waText);
-                
-                status.style.display = 'block';
-                status.style.color = '#24a3b1';
-                status.innerHTML = '<strong>Thank you, ' + name + '!</strong> Opening WhatsApp to confirm your inquiry with our clinic desk...';
-                
-                setTimeout(function() {
-                    window.open(waUrl, '_blank');
-                }, 800);
+            gsap.registerPlugin(ScrollTrigger);
+
+            document.addEventListener("DOMContentLoaded", () => {
+                initCounterAnimations();
+            });
+
+            /* ========== GSAP COUNTER ========== */
+            function initCounterAnimations() {
+                const counters = document.querySelectorAll(".about-hero_info-item_title");
+                counters.forEach((counter) => {
+                    const targetText = counter.textContent.trim();
+                    const targetNumber = parseFloat(targetText.replace(/[^\d.]/g, "")) || 0;
+                    const suffix = targetText.replace(/[\d.,\s]/g, "");
+
+                    gsap.set(counter, { innerText: 0 });
+                    gsap.to(counter, {
+                        innerText: targetNumber,
+                        duration: 3.5,
+                        ease: "power2.out",
+                        snap: { innerText: 1 },
+                        scrollTrigger: {
+                            trigger: counter,
+                            start: "top 85%",
+                            toggleActions: "play none none reset"
+                        },
+                        onUpdate: function() {
+                            const value = Math.ceil(this.targets()[0].innerText);
+                            counter.innerText = value.toLocaleString("en-US") + suffix;
+                        }
+                    });
+                });
             }
         </script>
+        <script>
+            /* My Skin My Health reveal engine v2, fade/slide reveals replacing IX2 */
+            (function () {
+                function runReveals() {
+                    if (!window.gsap) return;
+                    var hasST = !!window.ScrollTrigger;
+                    if (hasST) gsap.registerPlugin(ScrollTrigger);
+                    var els = gsap.utils.toArray('[data-w-id]').filter(function (el) {
+                        var s = el.getAttribute('style') || '';
+                        if (s.indexOf('opacity:0') === -1) return false;
+                        if (el.closest('.navbar_wrap') || el.closest('.w-nav') || el.closest('.w-dropdown-list')) return false;
+                        return true;
+                    });
+                    els.forEach(function (el) {
+                        gsap.set(el, { clearProps: 'transform,filter' });
+                        gsap.fromTo(el,
+                            { opacity: 0, y: 40 },
+                            {
+                                opacity: 1, y: 0, duration: 0.9, ease: 'power2.out',
+                                scrollTrigger: hasST ? { trigger: el, start: 'top 97%', once: true } : undefined
+                            }
+                        );
+                    });
+                    if (hasST) {
+                        window.addEventListener('load', function () { ScrollTrigger.refresh(); });
+                        ScrollTrigger.refresh();
+                    }
+                    setTimeout(function () {
+                        els.forEach(function (el) {
+                            if (parseFloat(getComputedStyle(el).opacity) === 0) {
+                                gsap.set(el, { opacity: 1, y: 0, clearProps: 'transform,filter' });
+                            }
+                        });
+                    }, 2600);
+                }
+                if (document.readyState !== 'loading') setTimeout(runReveals, 150);
+                else document.addEventListener('DOMContentLoaded', function () { setTimeout(runReveals, 150); });
+            })();
+        </script>
+        <script>
+            /* My Skin My Health image guard: fallback for any missing image */
+            (function(){
+              function ph(label){
+                var t=(label||'My Skin My Health').replace(/[<>&]/g,'').slice(0,22);
+                var svg='<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">'
+                 +'<defs><linearGradient id="lg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">'
+                 +'<stop offset="0" stop-color="#24a3b1"/><stop offset="1" stop-color="#011f23"/></linearGradient></defs>'
+                 +'<rect width="1280" height="720" fill="url(#lg)"/>'
+                 +'<circle cx="640" cy="298" r="44" fill="#fff" opacity="0.9"/>'
+                 +'<text x="640" y="436" fill="#fff" font-family="Sora,Arial" font-size="40" font-weight="600" text-anchor="middle" opacity="0.92">'+t+'</text></svg>';
+                return 'data:image/svg+xml;utf8,'+encodeURIComponent(svg);
+              }
+              function bind(im){
+                im.addEventListener('error',function(){ if(im.dataset.fbk)return; im.dataset.fbk='1'; im.src=ph(im.alt); });
+                if(im.complete && im.naturalWidth===0 && !im.dataset.fbk){ im.dataset.fbk='1'; im.src=ph(im.alt); }
+              }
+              document.querySelectorAll('img').forEach(bind);
+            })();
+        </script>
+        <script>
+            function lumoraLead(e){
+                e.preventDefault();
+                var f=e.target;
+                var name=(f.querySelector('input[name="name"]').value||'').trim();
+                var phone=(f.querySelector('input[name="phone"]').value||'').trim();
+                var service=(f.querySelector('input[name="service"]') ? f.querySelector('input[name="service"]').value : 'General Consultation').trim();
+                if(!name||!phone){return false;}
+
+                if (window.LumoraDB && window.LumoraDB.createAppointment) {
+                    try {
+                        window.LumoraDB.createAppointment({
+                            patientName: name,
+                            patientPhone: phone,
+                            serviceId: 'general-consultation',
+                            date: new Date().toISOString().slice(0, 10),
+                            time: 'Callback Requested',
+                            notes: 'Service Needed: ' + service + ' (Via Contact Page Lead Form)'
+                        });
+                    } catch (_) {}
+                }
+
+                var waNum = (window.LumoraDB && window.LumoraDB.getClinic().whatsapp) ? window.LumoraDB.getClinic().whatsapp.replace(/\D/g, '') : '918422990990';
+                var msg=encodeURIComponent("Hi Dr. Pallavi Rathi (My Skin My Health), I'm " + name + " (" + phone + "). I would like to inquire about: " + service + ". Please call me back.");
+                try{ window.open("https://wa.me/"+waNum+"?text="+msg,"_blank"); }catch(_){}
+                
+                var card=f.closest('.lead-form_card');
+                if(card){
+                    var sc=card.querySelector('.lead-form_success');
+                    if(sc){
+                        f.style.display='none';
+                        sc.style.display='block';
+                    }
+                }
+                return false;
+            }
+        </script>
+        <script src="assets/js/lumora-db.js?v=20260902p2" type="text/javascript"></script>
+        <script src="assets/js/website-sync.js?v=20260902p2" type="text/javascript"></script>
     </body>
 </html>
