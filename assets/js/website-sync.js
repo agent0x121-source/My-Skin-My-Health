@@ -56,6 +56,14 @@
         var phoneLinks = document.querySelectorAll('a[href^="tel:"], .bk-top__call, a.our-info_item-link[href^="tel:"]');
         phoneLinks.forEach(function (a) {
             a.href = 'tel:+' + cleanPhoneE164;
+            // Never wipe out .button_inner or its animated arrow icon inside .button_primary
+            if (a.classList.contains('button_primary') || a.closest('.button_primary')) {
+                var btnText = a.querySelector('.button_text');
+                if (btnText && btnText.textContent.trim().indexOf('Call') !== -1 && /\d/.test(btnText.textContent)) {
+                    btnText.textContent = 'Call Now';
+                }
+                return;
+            }
             // Update child span or div text if present
             var childText = a.querySelector('span, div, .our-info_item-para');
             if (childText) {
