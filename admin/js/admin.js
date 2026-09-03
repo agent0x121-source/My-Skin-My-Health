@@ -385,7 +385,7 @@
                     break;
                 case 'services':
                     titleEl.textContent = 'Skin & Health Services';
-                    subEl.textContent = 'Service catalogue, pricing, durations and assigned dentists';
+                    subEl.textContent = 'Service catalogue, pricing, durations and assigned doctors';
                     this.renderServices();
                     break;
                 case 'blogs':
@@ -1098,7 +1098,7 @@
                     <div class="card-header">
                         <div>
                             <h3 class="card-title">Doctor & Specialist Management</h3>
-                            <span class="card-subtitle">Dentists, availability schedules, and website display status</span>
+                            <span class="card-subtitle">Doctors, availability schedules, and website display status</span>
                         </div>
                         <button type="button" class="btn btn-primary btn-sm" id="btn-create-doctor">+ Add Doctor</button>
                     </div>
@@ -1881,7 +1881,7 @@
                     patientName: 'Sameer Kulkarni',
                     patientPhone: '+91 98111 22334',
                     doctorId: 'pallavi-rathi',
-                    serviceId: 'preventive-dentistry',
+                    serviceId: 'clinical-dermatology',
                     date: '2026-09-15',
                     time: '11:30 AM'
                 };
@@ -1900,9 +1900,9 @@
                 var apptDate = appt.date || '';
                 var apptTime = appt.time || '';
                 var clinicName = c.name || 'My Skin My Health';
-                var clinicAddr = c.address || '3rd Floor, Grand Helios Building, 303, Off FC Rd, above Axis Bank, opp. Hotel Ambassador, Model Colony, Shivajinagar, Pune 411016';
-                var clinicPh = c.phone || '+91 97654 07679';
-                var emergPh = c.phone || '+91 97654 07679';
+                var clinicAddr = c.address || 'Unit No. A 407/408, A Wing, Pranik Chambers, Opp. H.P. Petrol Pump, Saki Vihar Road, Sag Baug, Marol, Sakinaka, Mumbai 400072';
+                var clinicPh = c.phone || '+91 8422 990 990';
+                var emergPh = c.phone || '+91 8422 990 990';
                 var mapsLink = c.mapsUrl || 'https://maps.google.com/?cid=4187806642178671438';
 
                 // Replace variables (both camelCase and snake_case)
@@ -2411,7 +2411,7 @@
 
                     <div class="form-group">
                         <label>Clinical Notes / Symptoms</label>
-                        <textarea id="na-notes" placeholder="e.g. Tooth sensitivity or general checkup"></textarea>
+                        <textarea id="na-notes" placeholder="e.g. Acne treatment, laser toning or general skin checkup"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block">Confirm & Create Appointment</button>
@@ -2690,7 +2690,7 @@
                     <div style="display:flex; justify-content:space-between; border-bottom:2px solid #24a3b1; padding-bottom:12px; margin-bottom:16px;">
                         <div>
                             <h2 style="margin:0; color:#011f23;">My Skin My Health</h2>
-                            <p style="margin:2px 0 0 0; font-size:11px; color:#555;">3rd Floor, Grand Helios Building, Off FC Rd, Model Colony, Pune • +91 97654 07679</p>
+                            <p style="margin:2px 0 0 0; font-size:11px; color:#555;">Unit No. A 407/408, Pranik Chambers, Saki Vihar Road, Sakinaka, Mumbai • +91 8422 990 990</p>
                         </div>
                         <div style="text-align:right;">
                             <h3 style="margin:0; color:#24a3b1;">RECEIPT</h3>
@@ -2843,7 +2843,7 @@
                         </div>
                         <div class="form-group">
                             <label>Specialization *</label>
-                            <input type="text" id="de-spec" value="${doc.specialization || 'Dentist'}" required>
+                            <input type="text" id="de-spec" value="${doc.specialization || 'Dermatologist'}" required>
                         </div>
                     </div>
 
@@ -3288,7 +3288,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>Phone / WhatsApp Number</label>
-                            <input type="text" id="prof-phone" value="${user.phone || '+91 97654 07679'}" />
+                            <input type="text" id="prof-phone" value="${user.phone || '+91 8422 990 990'}" />
                         </div>
                         <div class="form-group">
                             <label>Avatar Photo URL / Path</label>

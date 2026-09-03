@@ -850,7 +850,7 @@
         doctor.featured = !!doctor.featured;
         if (!doctor.id) {
             doctor.id = (doctor.name || 'doctor').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || ('doc-' + Date.now());
-            doctor.services = doctor.services || ['general-consultation', 'preventive-dentistry'];
+            doctor.services = doctor.services || ['general-consultation', 'clinical-dermatology'];
             this.data.doctors.push(doctor);
             this.logAudit(actor ? actor.name : 'Admin', actor ? actor.role : 'ADMIN', 'CREATE', 'Doctor', 'Added doctor ' + doctor.name);
         } else {
@@ -1260,14 +1260,14 @@
 
         var patName = appt.patientName || 'Patient';
         var refNo = appt.reference || '';
-        var docName = doc ? doc.name : (appt.doctorName || 'Specialist Dentist');
-        var svcName = svc ? svc.name : (appt.serviceName || 'Dental Consultation');
+        var docName = doc ? doc.name : (appt.doctorName || 'Dermatology Specialist');
+        var svcName = svc ? svc.name : (appt.serviceName || 'Skin & Hair Consultation');
         var apptDate = appt.date || '';
         var apptTime = appt.time || '';
         var clinicName = clinic.name || 'My Skin My Health';
-        var clinicAddr = clinic.address || '3rd Floor, Grand Helios Building, 303, Off FC Rd, above Axis Bank, opp. Hotel Ambassador, Model Colony, Shivajinagar, Pune 411016';
-        var clinicPh = clinic.phone || '+91 97654 07679';
-        var emergPh = clinic.phone || '+91 97654 07679';
+        var clinicAddr = clinic.address || 'Unit No. A 407/408, A Wing, Pranik Chambers, Opp. H.P. Petrol Pump, Saki Vihar Road, Sag Baug, Marol, Sakinaka, Mumbai 400072';
+        var clinicPh = clinic.phone || '+91 8422 990 990';
+        var emergPh = clinic.phone || '+91 8422 990 990';
         var mapsLink = clinic.mapsUrl || 'https://maps.google.com/?cid=4187806642178671438';
 
         // Support both camelCase and snake_case tags

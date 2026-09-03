@@ -1,5 +1,5 @@
 /* ==========================================================================
-   The Dental Solutions — Appointment booking flow
+   My Skin My Health — Appointment booking flow
    --------------------------------------------------------------------------
    Component map (each is a function returning a DOM node):
      BookingFlow          state machine + step rendering
@@ -204,7 +204,7 @@
             el('h1', { class: 'bk-intro__title', text: 'Book your visit at ' + CLINIC.name }),
             el('p', {
                 class: 'bk-intro__para',
-                text: 'Choose the dentist you would like to see. Pick a service, a date and a time that suits you — it takes less than a minute, and our team confirms every booking personally.'
+                text: 'Choose the specialist you would like to see. Pick a service, a date and a time that suits you — it takes less than a minute, and our team confirms every booking personally.'
             }),
             el('div', { class: 'bk-intro__meta' }, [
                 el('span', {}, [icon(ICONS.clock), el('span', { text: 'Mon–Sat, 9:00–18:00' })]),
@@ -215,7 +215,7 @@
         var grid = el('div', { class: 'bk-doctors' });
         var loading = el('div', { class: 'bk-state' }, [
             el('span', { class: 'bk-spinner' }),
-            el('span', { text: 'Loading our dentists…' })
+            el('span', { text: 'Loading our doctors…' })
         ]);
         wrap.appendChild(loading);
 
@@ -224,7 +224,7 @@
             if (!doctors.length) {
                 wrap.appendChild(el('div', { class: 'bk-state' }, [
                     icon(ICONS.alert, 22),
-                    el('p', { text: 'No dentists are open for online booking right now. Please call the clinic on ' + CLINIC.phone + ' and we will find you a slot.' })
+                    el('p', { text: 'No specialists are open for online booking right now. Please call the clinic on ' + CLINIC.phone + ' and we will find you a slot.' })
                 ]));
                 return;
             }
@@ -297,7 +297,7 @@
     /* ============ step 2 — service dropdown, then calendar ⇄ time panel */
     function BookingDetails(state, go) {
         var main = el('div', { class: 'bk-panel__main' });
-        var asideOpts = { onBack: function () { go('doctor'); }, backLabel: 'All dentists' };
+        var asideOpts = { onBack: function () { go('doctor'); }, backLabel: 'All doctors' };
         var aside = DoctorAside(state, asideOpts);
         var panel = el('div', { class: 'bk-panel' }, [aside, main]);
 
@@ -402,7 +402,7 @@
             if (!services.length) {
                 bar.appendChild(el('div', { class: 'bk-state' }, [
                     icon(ICONS.alert, 22),
-                    el('p', { text: 'This dentist has no services open for online booking. Please call us on ' + CLINIC.phone + '.' })
+                    el('p', { text: 'This specialist has no services open for online booking. Please call us on ' + CLINIC.phone + '.' })
                 ]));
                 return;
             }
@@ -736,7 +736,7 @@
         var notes = field({
             name: 'notes', label: 'Additional information', textarea: true,
             placeholder: 'Briefly describe your concern, or anything we should know before your visit.',
-            hint: 'It helps the dentist prepare for your visit.'
+            hint: 'It helps the doctor prepare for your visit.'
         });
 
         var formAlert = el('p', { class: 'bk-alert', role: 'alert' }, [icon(ICONS.alert), el('span', { text: '' })]);
@@ -929,7 +929,7 @@
 
     function addToCalendar(state, statusNode) {
         var ics = buildIcs(state);
-        var filename = 'dental-clinica-' + state.result.reference + '.ics';
+        var filename = 'my-skin-my-health-' + state.result.reference + '.ics';
         var file = null;
 
         try { file = new File([ics], filename, { type: 'text/calendar' }); }

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   The Dental Solutions — Website Synchronization & Dynamic Content Hydrator
+   My Skin My Health — Website Synchronization & Dynamic Content Hydrator
    --------------------------------------------------------------------------
    Connects the public website presentation layer to the central LumoraDB
    while preserving 100% of the existing design, animations and layouts.
@@ -114,7 +114,7 @@
     /* ---------------------------------------------------- Doctors Hydration */
     function renderDoctorCard(doc) {
         var imgSrc = (doc.image || 'assets/img/gen_team-image-5.jpg').replace(/^\.\.\//, '').replace(/^\//, '');
-        var spec = doc.specialization || doc.qualification || 'Dentist';
+        var spec = doc.specialization || doc.qualification || 'Dermatologist';
         var ig = doc.instagram || 'https://instagram.com/';
         var tw = doc.twitter || 'https://twitter.com/';
         return '<div role="listitem" class="w-dyn-item">' +
@@ -362,7 +362,7 @@
                     <div class="lumora-auth-header">
                         <div class="lumora-auth-badge">Patient Portal</div>
                         <h2>Welcome to My Skin My Health</h2>
-                        <p>Sign in to manage your appointments, view dental history, or book a consultation.</p>
+                        <p>Sign in to manage your appointments, view skin treatment history, or book a consultation.</p>
                     </div>
 
                     <div class="lumora-tab-nav">
@@ -496,7 +496,7 @@
                     <div class="lumora-empty-state">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#24a3b1" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                         <h4>No appointments yet</h4>
-                        <p>Book your visit online with our gentle dental specialists.</p>
+                        <p>Book your visit online with our expert dermatology specialists.</p>
                         <a href="booking.html" class="lumora-btn-primary" style="display:inline-block; margin-top:12px;">Book Appointment Now</a>
                     </div>
                 `;
@@ -518,7 +518,7 @@
                             <div class="lumora-appt-details">
                                 <div class="lumora-appt-item">
                                     <span class="label">Service:</span>
-                                    <strong>${svc ? svc.name : 'Dental Consultation'}</strong>
+                                    <strong>${svc ? svc.name : 'Skin & Hair Consultation'}</strong>
                                 </div>
                                 <div class="lumora-appt-item">
                                     <span class="label">Doctor:</span>
@@ -533,7 +533,7 @@
                             ${(appt.status === 'Pending' || appt.status === 'Confirmed') ? `
                                 <div class="lumora-appt-actions">
                                     <button class="lumora-btn-sm lumora-btn-cancel" data-ref="${appt.reference}">Cancel Visit</button>
-                                    <a href="https://wa.me/918422990990?text=Hi%20DENTAL%20CLINICa,%20I%20would%20like%20to%20reschedule%20my%20appointment%20(Ref:%20${appt.reference})" target="_blank" class="lumora-btn-sm lumora-btn-resched">Request Reschedule</a>
+                                    <a href="https://wa.me/918422990990?text=Hi%20My%20Skin%20My%20Health,%20I%20would%20like%20to%20reschedule%20my%20appointment%20(Ref:%20${appt.reference})" target="_blank" class="lumora-btn-sm lumora-btn-resched">Request Reschedule</a>
                                 </div>
                             ` : ''}
                         </div>
