@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="7 9 551 366" fill="none" role="img" aria-label="My Skin My Health">
+  <defs>
+    <linearGradient id="lm-g-dark" x1="9" y1="12" x2="356" y2="322" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3fc7d6"/>
+      <stop offset="100%" stop-color="#24a3b1"/>
+    </linearGradient>
+  </defs>
+  
+    <g transform="translate(25, 25) scale(0.9)">
+        <!-- Outer droplet / leaf silhouette -->
+        <path d="M160 20 C110 90 40 160 40 230 C40 300 95 350 160 350 C225 350 280 300 280 230 C280 160 210 90 160 20 Z" fill="url(#lm-g-dark)" fill-opacity="0.22"/>
+        <!-- Inner glowing aesthetic curve -->
+        <path d="M160 55 C125 115 75 175 75 230 C75 280 115 320 160 320 C205 320 245 280 245 230 C245 175 195 115 160 55 Z" stroke="url(#lm-g-dark)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <!-- Radiant medical star / wellness sparkle -->
+        <path d="M160 140 V240 M110 190 H210" stroke="url(#lm-g-dark)" stroke-width="14" stroke-linecap="round"/>
+        <circle cx="160" cy="190" r="16" fill="url(#lm-g-dark)"/>
+    </g>
+  <g fill="#ffffff" font-family="'Sora',Arial,Helvetica,sans-serif">
+    <text x="100" y="170" font-size="52" font-weight="800" letter-spacing="4">MY SKIN</text>
+    <text x="95" y="260" font-size="78" font-weight="900" letter-spacing="2">MY HEALTH</text>
+    <text x="105" y="325" font-size="26" font-weight="600" letter-spacing="5" fill="#3fc7d6">DR. PALLAVI RATHI</text>
+  </g>
+</svg>

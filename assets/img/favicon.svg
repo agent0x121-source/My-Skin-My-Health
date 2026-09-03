@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="fav-g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3fc7d6"/>
+      <stop offset="100%" stop-color="#022f34"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#fav-g)"/>
+  <!-- Radiant Skin Care & Health Symbol -->
+  <path d="M32 10 C24 19 14 27 14 36 C14 46 22 53 32 53 C42 53 50 46 50 36 C50 27 40 19 32 10 Z" fill="rgba(255,255,255,0.18)"/>
+  <path d="M32 16 C26 23 18 30 18 37 C18 44.5 24.3 50 32 50 C39.7 50 46 44.5 46 37 C46 30 38 23 32 16 Z" stroke="#3fc7d6" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cross / Star Accent -->
+  <path d="M32 26 V42 M24 34 H40" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

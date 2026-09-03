@@ -1,0 +1,1018 @@
+/* ==========================================================================
+   The Dental Solutions — Appointment booking
+   Scoped entirely under .bk- classes so it cannot affect existing pages.
+   Colours, radii and type are taken from the site's own design tokens.
+   ========================================================================== */
+
+.bk {
+    --bk-primary: #24a3b1;
+    --bk-primary-strong: #1c91a1;
+    --bk-dark: #011f23;
+    --bk-dark-soft: #022f34;
+    --bk-body: #5d6c7b;
+    --bk-muted: #6e7677;
+    --bk-line: #ddebec;
+    --bk-line-soft: #e4e8ea;
+    --bk-tint: #e2f1f3;
+    --bk-surface: #ffffff;
+    --bk-canvas: #fafcfc;
+    --bk-grey: #9aa6ad;
+    --bk-grey-soft: #eceff0;
+    --bk-error: #d32f2f;
+    --bk-radius-sm: 8px;
+    --bk-radius: 12px;
+    --bk-radius-lg: 20px;
+    --bk-radius-xl: 24px;
+    --bk-pill: 99px;
+    --bk-shadow: 0 2px 10px rgba(2, 47, 52, .06);
+    --bk-shadow-lg: 0 18px 50px rgba(2, 47, 52, .12);
+    --bk-ease: cubic-bezier(.4, 0, .2, 1);
+    --bk-move: cubic-bezier(.45, .05, .25, 1);
+    --bk-move-time: .45s;
+
+    font-family: Sora, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--bk-dark);
+    background: var(--bk-canvas);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bk *,
+.bk *::before,
+.bk *::after { box-sizing: border-box; }
+
+.bk__shell {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 32px clamp(12px, 3vw, 24px) 80px;
+}
+
+/* ------------------------------------------------------------------ header */
+.bk-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 20px clamp(12px, 3vw, 24px);
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.bk-top__logo img { display: block; height: 46px; width: auto; }
+
+.bk-top__call {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--bk-dark);
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-pill);
+    background: var(--bk-surface);
+    white-space: nowrap;
+    transition: border-color .2s var(--bk-ease), color .2s var(--bk-ease);
+}
+
+.bk-top__call:hover { border-color: var(--bk-primary); color: var(--bk-primary); }
+
+/* --------------------------------------------------------------- progress */
+.bk-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 0 auto 36px;
+    padding: 0;
+    list-style: none;
+}
+
+.bk-steps__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--bk-muted);
+}
+
+.bk-steps__dot {
+    width: 22px;
+    height: 22px;
+    flex: none;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--bk-line-soft);
+    color: var(--bk-muted);
+    transition: background .25s var(--bk-ease), color .25s var(--bk-ease);
+}
+
+.bk-steps__item.is-active .bk-steps__dot { background: var(--bk-primary); color: #fff; }
+.bk-steps__item.is-active { color: var(--bk-dark); font-weight: 500; }
+.bk-steps__item.is-done .bk-steps__dot { background: var(--bk-dark); color: #fff; }
+.bk-steps__sep { width: 18px; height: 1px; background: var(--bk-line); }
+
+/* ------------------------------------------------------------------ intro */
+.bk-intro { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+
+.bk-intro__eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bk-primary);
+    background: var(--bk-tint);
+    border-radius: var(--bk-pill);
+    padding: 7px 16px;
+    margin-bottom: 20px;
+}
+
+.bk-intro__title {
+    font-size: clamp(26px, 4vw, 44px);
+    line-height: 1.15;
+    font-weight: 600;
+    margin: 0 0 14px;
+    letter-spacing: -.02em;
+    overflow-wrap: break-word;
+}
+
+.bk-intro__para { font-size: clamp(15px, 1.4vw, 16px); line-height: 1.6; color: var(--bk-body); margin: 0; }
+
+.bk-intro__meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin-top: 22px;
+    font-size: 14px;
+    color: var(--bk-muted);
+}
+
+.bk-intro__meta span { display: inline-flex; align-items: center; gap: 8px; }
+
+/* ----------------------------------------------------------- doctor cards */
+.bk-doctors {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.bk-doctor {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: var(--bk-surface);
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-radius-xl);
+    overflow: hidden;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: transform .28s var(--bk-ease), box-shadow .28s var(--bk-ease), border-color .28s var(--bk-ease);
+}
+
+.bk-doctor:hover,
+.bk-doctor:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: var(--bk-shadow-lg);
+    border-color: var(--bk-primary);
+    outline: none;
+}
+
+.bk-doctor__media { aspect-ratio: 4 / 3; overflow: hidden; background: var(--bk-tint); }
+
+.bk-doctor__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s var(--bk-ease);
+}
+
+.bk-doctor:hover .bk-doctor__media img { transform: scale(1.05); }
+
+.bk-doctor__body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.bk-doctor__name { font-size: 19px; font-weight: 600; margin: 0 0 4px; }
+.bk-doctor__role { font-size: 14px; color: var(--bk-primary); margin: 0 0 10px; font-weight: 500; }
+.bk-doctor__bio { font-size: 14px; line-height: 1.55; color: var(--bk-body); margin: 0 0 16px; }
+.bk-doctor__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+
+.bk-tag {
+    font-size: 12px;
+    color: var(--bk-muted);
+    background: var(--bk-canvas);
+    border: 1px solid var(--bk-line-soft);
+    border-radius: var(--bk-pill);
+    padding: 5px 12px;
+}
+
+.bk-doctor__action {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--bk-dark);
+}
+
+.bk-doctor__arrow {
+    width: 34px;
+    height: 34px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--bk-tint);
+    color: var(--bk-primary);
+    display: grid;
+    place-items: center;
+    transition: background .25s var(--bk-ease), color .25s var(--bk-ease), transform .25s var(--bk-ease);
+}
+
+.bk-doctor:hover .bk-doctor__arrow { background: var(--bk-primary); color: #fff; transform: translateX(3px); }
+
+/* --------------------------------------------------------- two-column shell */
+.bk-panel {
+    display: grid;
+    grid-template-columns: minmax(250px, 296px) 1fr;
+    background: var(--bk-surface);
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-radius-xl);
+    box-shadow: var(--bk-shadow);
+    overflow: hidden;
+}
+
+.bk-panel__aside {
+    padding: 30px 26px;
+    border-right: 1px solid var(--bk-line);
+    background: var(--bk-surface);
+    min-width: 0;
+}
+
+.bk-panel__main { padding: 30px clamp(18px, 2.6vw, 32px); min-width: 0; }
+
+.bk-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 0;
+    padding: 0 0 22px;
+    font: inherit;
+    font-size: 14px;
+    color: var(--bk-muted);
+    cursor: pointer;
+    transition: color .2s var(--bk-ease);
+}
+
+.bk-back:hover { color: var(--bk-primary); }
+
+.bk-aside__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.bk-aside__name { font-size: 21px; font-weight: 600; margin: 0 0 4px; }
+.bk-aside__role { font-size: 14px; color: var(--bk-primary); margin: 0 0 20px; font-weight: 500; }
+.bk-aside__facts { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+
+.bk-fact { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--bk-body); overflow-wrap: anywhere; }
+.bk-fact svg { flex: none; margin-top: 2px; color: var(--bk-muted); }
+.bk-fact strong { font-weight: 500; color: var(--bk-dark); }
+
+.bk-aside__note { border-top: 1px solid var(--bk-line); padding-top: 20px; }
+.bk-aside__note h3 { font-size: 15px; font-weight: 600; margin: 0 0 8px; }
+.bk-aside__note p { font-size: 13.5px; line-height: 1.6; color: var(--bk-body); margin: 0; }
+
+.bk-main__title { font-size: clamp(20px, 2.4vw, 23px); font-weight: 600; margin: 0 0 10px; }
+.bk-main__para { font-size: 14.5px; line-height: 1.6; color: var(--bk-body); margin: 0 0 24px; }
+
+/* ------------------------------------------------------------ service cards */
+.bk-services { display: grid; gap: 12px; }
+
+.bk-service {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 18px 52px 18px 20px;
+    font: inherit;
+    color: inherit;
+    background: var(--bk-surface);
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-radius-lg);
+    cursor: pointer;
+    transition: border-color .22s var(--bk-ease), background .22s var(--bk-ease), box-shadow .22s var(--bk-ease);
+}
+
+.bk-service:hover { border-color: var(--bk-primary); background: var(--bk-canvas); }
+.bk-service:focus-visible { outline: 2px solid var(--bk-primary); outline-offset: 2px; }
+
+.bk-service.is-selected {
+    border-color: var(--bk-primary);
+    background: var(--bk-tint);
+    box-shadow: 0 0 0 1px var(--bk-primary) inset;
+}
+
+.bk-service__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.bk-service__name { font-size: 16px; font-weight: 600; }
+
+.bk-service__duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--bk-muted);
+    white-space: nowrap;
+}
+
+.bk-service__desc { display: block; font-size: 14px; line-height: 1.55; color: var(--bk-body); }
+
+.bk-service__mark {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%) scale(.6);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--bk-primary);
+    color: #fff;
+    opacity: 0;
+    transition: opacity .22s var(--bk-ease), transform .22s var(--bk-ease);
+}
+
+.bk-service.is-selected .bk-service__mark { opacity: 1; transform: translateY(-50%) scale(1); }
+
+/* =========================================================== the scheduler */
+/* Closed: the calendar owns the full width.
+   Open (a date is picked): the calendar narrows to ~78% and the time panel
+   slides in on the right. Both sides transition together. */
+.bk-scheduler { display: flex; align-items: flex-start; width: 100%; }
+
+.bk-scheduler__cal {
+    flex: 1 1 auto;
+    min-width: 0;
+    transition: flex-basis var(--bk-move-time) var(--bk-move),
+                padding-right var(--bk-move-time) var(--bk-move);
+}
+
+.bk-scheduler__times {
+    flex: 0 0 0px;
+    min-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(14px);
+    border-left: 1px solid transparent;
+    transition: flex-basis var(--bk-move-time) var(--bk-move),
+                opacity .3s var(--bk-ease) .1s,
+                transform var(--bk-move-time) var(--bk-move),
+                padding-left var(--bk-move-time) var(--bk-move);
+}
+
+.bk-scheduler.is-open .bk-scheduler__cal { padding-right: 24px; }
+
+.bk-scheduler.is-open .bk-scheduler__times {
+    flex-basis: 218px;
+    opacity: 1;
+    transform: none;
+    padding-left: 22px;
+    border-left-color: var(--bk-line);
+}
+
+/* --------------------------------------------------------------- calendar */
+.bk-cal__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.bk-cal__month { font-size: clamp(15px, 1.6vw, 17px); font-weight: 600; }
+.bk-cal__nav { display: flex; gap: 6px; }
+
+.bk-cal__nav button {
+    width: 34px;
+    height: 34px;
+    flex: none;
+    border-radius: 50%;
+    border: 1px solid var(--bk-line);
+    background: var(--bk-surface);
+    color: var(--bk-dark);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: border-color .2s var(--bk-ease), color .2s var(--bk-ease);
+}
+
+.bk-cal__nav button:hover:not(:disabled) { border-color: var(--bk-primary); color: var(--bk-primary); }
+.bk-cal__nav button:disabled { opacity: .35; cursor: not-allowed; }
+
+.bk-cal__grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: clamp(4px, .6vw, 8px); }
+
+.bk-cal__dow {
+    text-align: center;
+    font-size: clamp(10px, 1.1vw, 12px);
+    color: var(--bk-muted);
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+}
+
+.bk-day {
+    position: relative;
+    aspect-ratio: 1;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bk-tint);
+    color: var(--bk-dark);
+    font: inherit;
+    font-size: clamp(12px, 1.3vw, 15px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .2s var(--bk-ease), color .2s var(--bk-ease), transform .2s var(--bk-ease);
+}
+
+.bk-day:hover:not(:disabled) { background: var(--bk-primary); color: #fff; transform: scale(1.05); }
+.bk-day:disabled { background: transparent; color: #b6c2c4; cursor: not-allowed; }
+.bk-day.is-empty { background: transparent; cursor: default; }
+.bk-day.is-selected { background: var(--bk-dark); color: #fff; }
+
+.bk-day.is-today::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.bk-tz { margin-top: 24px; max-width: 340px; }
+.bk-tz__label { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+
+/* ------------------------------------------------------------- time panel */
+.bk-times__head { font-size: 14.5px; font-weight: 600; margin: 0 0 14px; }
+
+.bk-times__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 430px;
+    overflow-y: auto;
+    padding-right: 4px;
+    overscroll-behavior: contain;
+}
+
+/* One row per slot. The Next button lives in the row and is revealed by
+   growing from zero width, so the pair never reflows the rows around it. */
+.bk-slot-row { display: flex; align-items: stretch; gap: 0; width: 100%; }
+
+.bk-slot {
+    flex: 1 1 100%;
+    min-width: 0;
+    padding: 13px 6px;
+    border: 1px solid var(--bk-primary);
+    border-radius: var(--bk-radius);
+    background: var(--bk-surface);
+    color: var(--bk-primary);
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: flex-basis .28s var(--bk-ease),
+                background .24s var(--bk-ease),
+                color .24s var(--bk-ease),
+                border-color .24s var(--bk-ease);
+}
+
+.bk-slot:hover { background: var(--bk-tint); }
+.bk-slot:focus-visible { outline: 2px solid var(--bk-primary); outline-offset: 2px; }
+
+.bk-slot-row.is-selected .bk-slot {
+    flex-basis: 54%;
+    font-size: 13.5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: var(--bk-grey);
+    border-color: var(--bk-grey);
+    color: #fff;
+    cursor: default;
+}
+
+.bk-slot-next {
+    flex: 0 0 0%;
+    min-width: 0;
+    margin-left: 0;
+    padding: 13px 0;
+    font-size: 14px;
+    border: 0;
+    border-radius: var(--bk-radius);
+    background: var(--bk-dark);
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: flex-basis .28s var(--bk-ease),
+                margin-left .28s var(--bk-ease),
+                opacity .22s var(--bk-ease) .06s;
+}
+
+.bk-slot-row.is-selected .bk-slot-next {
+    flex-basis: 46%;
+    margin-left: 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.bk-slot-next:hover { background: var(--bk-primary); }
+.bk-slot-next:focus-visible { outline: 2px solid var(--bk-primary); outline-offset: 2px; }
+
+/* -------------------------------------------------------------- form bits */
+.bk-field { margin-bottom: 20px; }
+
+.bk-label {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--bk-dark);
+}
+
+.bk-req { color: var(--bk-error); }
+
+.bk-optional {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--bk-muted);
+    background: var(--bk-canvas);
+    border: 1px solid var(--bk-line-soft);
+    border-radius: var(--bk-pill);
+    padding: 2px 9px;
+}
+
+.bk-input,
+.bk-select,
+.bk-textarea {
+    width: 100%;
+    max-width: 100%;
+    font: inherit;
+    font-size: 15px;
+    color: var(--bk-dark);
+    background: var(--bk-surface);
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-radius);
+    padding: 13px 16px;
+    transition: border-color .2s var(--bk-ease), box-shadow .2s var(--bk-ease);
+    appearance: none;
+}
+
+.bk-textarea { min-height: 104px; resize: vertical; line-height: 1.55; }
+
+.bk-input:focus,
+.bk-select:focus,
+.bk-textarea:focus {
+    outline: none;
+    border-color: var(--bk-primary);
+    box-shadow: 0 0 0 3px rgba(36, 163, 177, .15);
+}
+
+.bk-input.is-invalid,
+.bk-select.is-invalid,
+.bk-textarea.is-invalid { border-color: var(--bk-error); }
+
+.bk-select-wrap { position: relative; min-width: 0; }
+
+.bk-select-wrap::after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--bk-muted);
+    border-bottom: 2px solid var(--bk-muted);
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+}
+
+.bk-select { padding-right: 40px; cursor: pointer; }
+.bk-hint { font-size: 13px; color: var(--bk-muted); margin: 8px 0 0; line-height: 1.5; }
+.bk-error { display: none; font-size: 13px; color: var(--bk-error); margin: 7px 0 0; }
+.bk-error.is-visible { display: block; }
+
+.bk-phone { display: grid; grid-template-columns: minmax(96px, 118px) minmax(0, 1fr); gap: 10px; }
+
+/* ------------------------------------------------------ states & feedback */
+.bk-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    padding: 40px 16px;
+    color: var(--bk-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.bk-spinner {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid var(--bk-line);
+    border-top-color: var(--bk-primary);
+    animation: bk-spin .8s linear infinite;
+}
+
+@keyframes bk-spin { to { transform: rotate(360deg); } }
+
+.bk-alert {
+    display: none;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px 16px;
+    border-radius: var(--bk-radius);
+    background: #fdeaea;
+    color: var(--bk-error);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.bk-alert.is-visible { display: flex; }
+
+/* -------------------------------------------------------------- summaries */
+.bk-summary { border-top: 1px solid var(--bk-line); padding-top: 18px; margin: 20px 0 0; }
+
+.bk-summary__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 14px;
+    padding: 7px 0;
+}
+
+.bk-summary__row dt { color: var(--bk-muted); margin: 0; flex: none; }
+.bk-summary__row dd { margin: 0; text-align: right; font-weight: 500; color: var(--bk-dark); overflow-wrap: anywhere; }
+
+/* ---------------------------------------------------------------- buttons */
+.bk-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.bk-actions--center { justify-content: center; }
+
+.bk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 28px;
+    border-radius: var(--bk-pill);
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .25s var(--bk-ease), color .25s var(--bk-ease),
+                border-color .25s var(--bk-ease), opacity .25s var(--bk-ease);
+}
+
+.bk-btn--primary { background: var(--bk-dark); color: #fff; }
+.bk-btn--primary:hover:not(:disabled) { background: var(--bk-primary); }
+.bk-btn--ghost { background: transparent; color: var(--bk-dark); border-color: var(--bk-line); }
+.bk-btn--ghost:hover { border-color: var(--bk-primary); color: var(--bk-primary); }
+.bk-btn:disabled { opacity: .45; cursor: not-allowed; }
+
+/* ---------------------------------------------------------------- success */
+.bk-success {
+    max-width: 620px;
+    margin: 0 auto;
+    background: var(--bk-surface);
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-radius-xl);
+    box-shadow: var(--bk-shadow);
+    padding: 44px clamp(20px, 4vw, 38px);
+    text-align: center;
+}
+
+.bk-success__mark {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: var(--bk-tint);
+    color: var(--bk-primary);
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    animation: bk-pop .45s cubic-bezier(.2, .9, .3, 1.4);
+}
+
+@keyframes bk-pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+.bk-success__title { font-size: clamp(21px, 3vw, 26px); font-weight: 600; margin: 0 0 10px; }
+.bk-success__para { font-size: 15px; line-height: 1.6; color: var(--bk-body); margin: 0 0 26px; }
+
+.bk-card {
+    text-align: left;
+    border: 1px solid var(--bk-line);
+    border-radius: var(--bk-radius-lg);
+    padding: 22px;
+    background: var(--bk-canvas);
+}
+
+.bk-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--bk-line);
+    margin-bottom: 6px;
+}
+
+.bk-card__doctor { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.bk-card__doctor img { width: 52px; height: 52px; flex: none; border-radius: 50%; object-fit: cover; }
+.bk-card__doctor h3 { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+.bk-card__doctor p { font-size: 13.5px; color: var(--bk-primary); margin: 0; }
+
+/* The reference sits inside the card, beside the doctor — the first thing a
+   patient looks for when they call the clinic. */
+.bk-ref-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    padding: 8px 14px;
+    border-radius: var(--bk-radius);
+    background: var(--bk-tint);
+    border: 1px dashed var(--bk-primary);
+}
+
+.bk-ref-badge__label {
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bk-primary-strong);
+}
+
+.bk-ref-badge__code {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--bk-dark);
+}
+
+.bk-cal-status { font-size: 13px; color: var(--bk-muted); line-height: 1.5; margin: 14px 0 0; min-height: 1px; }
+
+/* ------------------------------------------------------------- transition */
+.bk-view { animation: bk-fade .35s var(--bk-ease) both; }
+
+@keyframes bk-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+    .bk-view, .bk-success__mark { animation: none; }
+    .bk *, .bk *::before, .bk *::after { transition-duration: .01ms !important; }
+}
+
+.bk-sr {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.bk-link { color: var(--bk-primary); text-decoration: underline; text-underline-offset: 3px; }
+
+/* =============================================================== responsive */
+
+/* Laptops: keep the two-column scheduler but give the time panel more room,
+   since 22% of a narrower main column becomes too tight for "12:30 PM". */
+@media (max-width: 1180px) {
+    .bk-scheduler.is-open .bk-scheduler__cal { padding-right: 20px; }
+    .bk-scheduler.is-open .bk-scheduler__times { flex-basis: 206px; padding-left: 18px; }
+}
+
+/* Tablets: the doctor aside moves above; the scheduler keeps its two columns. */
+@media (max-width: 991px) {
+    .bk-panel { grid-template-columns: 1fr; }
+    .bk-panel__aside { border-right: 0; border-bottom: 1px solid var(--bk-line); padding: 24px 22px; }
+    .bk-panel__main { padding: 24px 22px; }
+    .bk-aside__facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 20px; }
+    .bk-scheduler.is-open .bk-scheduler__times { flex-basis: 224px; }
+}
+
+/* Phones: the same conceptual flow, stacked. Calendar, then the chosen date,
+   then its times, then Next — never a squeezed two-column grid. */
+@media (max-width: 767px) {
+    .bk__shell { padding: 18px 14px 64px; }
+    .bk-top { padding: 14px; }
+    .bk-top__call span { display: none; }
+    .bk-steps__label { display: none; }
+    .bk-steps__sep { width: 14px; }
+    .bk-doctors { grid-template-columns: 1fr; gap: 16px; }
+
+    .bk-scheduler { display: block; }
+    .bk-scheduler__cal,
+    .bk-scheduler.is-open .bk-scheduler__cal { padding-right: 0; }
+
+    .bk-scheduler__times,
+    .bk-scheduler.is-open .bk-scheduler__times {
+        border-left: 0;
+        padding-left: 0;
+        min-width: 0;
+    }
+
+    .bk-scheduler.is-open .bk-scheduler__times {
+        margin-top: 26px;
+        padding-top: 22px;
+        border-top: 1px solid var(--bk-line);
+    }
+
+    /* Height, not width, animates when the panel is stacked. */
+    .bk-scheduler__times { max-height: 0; }
+    .bk-scheduler.is-open .bk-scheduler__times { max-height: 2000px; }
+
+    .bk-times__list { max-height: none; overflow: visible; padding-right: 0; }
+    .bk-actions .bk-btn { width: 100%; }
+    .bk-success { padding: 32px 20px; }
+    .bk-card__top { flex-direction: column; align-items: flex-start; }
+    .bk-ref-badge { align-items: flex-start; width: 100%; }
+    .bk-summary__row { gap: 12px; }
+}
+
+/* Small phones (320–414px): tighten the calendar so seven columns still fit
+   and the time buttons keep a usable tap target. */
+@media (max-width: 480px) {
+    .bk__shell { padding: 16px 10px 56px; }
+    .bk-panel__aside, .bk-panel__main { padding: 20px 14px; }
+    .bk-cal__grid { gap: 3px; }
+    .bk-day { font-size: 12px; }
+    .bk-cal__dow { font-size: 10px; }
+    .bk-service { padding: 16px 44px 16px 16px; }
+    .bk-slot, .bk-slot-next { font-size: 14px; padding: 12px 4px; }
+    .bk-slot-row.is-selected .bk-slot { flex-basis: 52%; }
+    .bk-slot-row.is-selected .bk-slot-next { flex-basis: 48%; }
+    .bk-phone { grid-template-columns: minmax(86px, 100px) minmax(0, 1fr); gap: 8px; }
+    .bk-summary__row { flex-direction: column; gap: 2px; }
+    .bk-summary__row dd { text-align: left; }
+    .bk-fact { font-size: 13.5px; }
+}
+
+/* ================================ service dropdown stage → calendar reveal */
+/* The dropdown starts centred in the empty booking area. Choosing a service
+   adds .has-service: the bar rises and shrinks, and the calendar fades in
+   beneath it. Both halves transition together. */
+.bk-stage { display: flex; flex-direction: column; }
+
+.bk-servicebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    padding: 8px 0 0;
+    transition: min-height .38s var(--bk-ease), padding .38s var(--bk-ease);
+}
+
+.bk-servicebar__inner {
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    transition: max-width .38s var(--bk-ease), text-align .38s var(--bk-ease);
+}
+
+.bk-servicebar__inner .bk-label { justify-content: center; font-size: 15px; margin-bottom: 12px; }
+
+.bk-select--service { font-size: 16px; padding-top: 15px; padding-bottom: 15px; text-align: left; }
+
+.bk-servicebar__hint {
+    font-size: 13.5px;
+    color: var(--bk-muted);
+    line-height: 1.5;
+    margin: 10px 0 0;
+}
+
+.bk-stage.has-service .bk-servicebar { min-height: 0; padding-bottom: 22px; }
+
+.bk-stage.has-service .bk-servicebar__inner { max-width: 440px; text-align: center; }
+
+.bk-stage.has-service .bk-servicebar__inner .bk-label { justify-content: center; font-size: 14px; margin-bottom: 8px; }
+
+.bk-stage.has-service .bk-select--service { max-width: 440px; font-size: 15px; padding-top: 13px; padding-bottom: 13px; }
+
+.bk-stage.has-service .bk-servicebar__hint { text-align: center; }
+
+/* The calendar half: collapsed and invisible until a service is chosen. */
+.bk-reveal {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-8px);
+    transition: max-height .42s var(--bk-ease),
+                opacity .3s var(--bk-ease) .08s,
+                transform .38s var(--bk-ease);
+}
+
+.bk-stage.has-service .bk-reveal {
+    max-height: 1600px;
+    opacity: 1;
+    transform: none;
+    overflow: visible;
+    border-top: 1px solid var(--bk-line);
+    padding-top: 24px;
+}
+
+@media (max-width: 767px) {
+    .bk-servicebar { min-height: 200px; }
+    .bk-stage.has-service .bk-select--service { max-width: 100%; }
+}
+
+/* Keep the day circles a comfortable size instead of stretching them to fill
+   whatever width the calendar column happens to have. */
+/* Centred via a percentage margin plus a transform rather than auto
+   margins: "auto" is not an animatable value, so the calendar used to snap
+   to the left instead of gliding. Both of these interpolate. */
+/* Both positions are plain static layout; the travel between them is played
+   by the FLIP transform in booking.js, so it is a straight horizontal slide. */
+.bk-cal {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    will-change: transform;
+}
+
+.bk-scheduler.is-open .bk-cal { margin-left: 0; margin-right: auto; }
+.bk-day { max-width: 52px; max-height: 52px; margin: 0 auto; }
+.bk-cal__dow { max-width: 52px; margin: 0 auto; }
+
+@media (max-width: 767px) {
+    .bk-cal,
+    .bk-scheduler.is-open .bk-cal { max-width: 360px; margin-left: auto; margin-right: auto; }
+    .bk-day, .bk-cal__dow { max-width: 44px; }
+}
+
+@media (max-width: 480px) {
+    .bk-cal { max-width: 100%; }
+    .bk-day, .bk-cal__dow { max-width: 40px; }
+}
+
+/* Keep the dropdown chevron on the edge of the control, not the column. */
+.bk-servicebar__inner .bk-select-wrap { max-width: 440px; margin: 0 auto; }
+.bk-stage.has-service .bk-servicebar__inner .bk-select-wrap { max-width: 440px; margin: 0 auto; }
+@media (max-width: 767px) {
+    .bk-stage.has-service .bk-servicebar__inner .bk-select-wrap { max-width: 100%; }
+}
+
+/* A collapsed flex item still keeps its content's minimum box, which left a
+   thin dark sliver beside every unselected slot. Clamp it shut instead. */
+.bk-slot-row .bk-slot-next { max-width: 0; padding-left: 0; padding-right: 0; }
+
+.bk-slot-row.is-selected .bk-slot-next {
+    max-width: 60%;
+    padding-left: 6px;
+    padding-right: 6px;
+    transition: flex-basis .28s var(--bk-ease),
+                max-width .28s var(--bk-ease),
+                margin-left .28s var(--bk-ease),
+                opacity .22s var(--bk-ease) .06s;
+}
