@@ -185,6 +185,38 @@
                 border: 1px solid rgba(36, 163, 177, 0.18);
                 padding: 24px;
                 box-shadow: 0 16px 40px rgba(1, 31, 35, 0.05);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .transit-cards-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 18px;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .transit-card-item {
+                flex: 1;
+                min-height: 165px;
+                background: #ffffff;
+                border: 1px solid rgba(36, 163, 177, 0.18);
+                border-radius: 20px;
+                padding: 26px 28px;
+                box-shadow: 0 10px 30px rgba(1, 31, 35, 0.04);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                box-sizing: border-box;
+                transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            }
+            .transit-card-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 16px 36px rgba(36, 163, 177, 0.12);
+                border-color: #24a3b1;
             }
             .map-iframe {
                 width: 100%;
@@ -605,34 +637,33 @@
                                         </div>
                                     </div>
 
-                                    <!-- Right: Matching Sized Box with ONLY 3 Distance Cards (Vertically Matched to Map) -->
-                                    <div data-w-id="transit-col" style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0);opacity:0" class="transit-frame_wrap" style="background: #ffffff; border-radius: 24px; border: 1px solid rgba(36, 163, 177, 0.18); padding: 24px; box-shadow: 0 16px 40px rgba(1, 31, 35, 0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 16px; height: 100%; box-sizing: border-box;">
-                                        
+                                    <!-- Right: 3 Distinct White Distance Cards Stretched Vertically to Match Map Exactly -->
+                                    <div class="transit-cards-column">
                                         <!-- Distance Card 1: Metro -->
-                                        <div class="transit-strip-box" style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: #f7fafb; border: 1px solid rgba(36, 163, 177, 0.16); border-radius: 18px; padding: 22px 24px; box-sizing: border-box; transition: transform 0.2s ease, border-color 0.2s ease;">
-                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-                                                <div style="font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 600; color: #011f23;">🚇 Sakinaka Metro Station</div>
-                                                <span style="font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 600; padding: 5px 12px; background: rgba(36, 163, 177, 0.12); color: #24a3b1; border-radius: 20px;">500m &bull; 5 Min Walk</span>
+                                        <div data-w-id="transit-c1" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" class="transit-card-item">
+                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                                                <div style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23;">🚇 Sakinaka Metro Station</div>
+                                                <span style="font-family: 'Sora', sans-serif; font-size: 12.5px; font-weight: 600; padding: 6px 14px; background: rgba(36, 163, 177, 0.12); color: #24a3b1; border-radius: 20px;">500m &bull; 5 Min Walk</span>
                                             </div>
-                                            <p style="font-size: 13.5px; line-height: 1.55; color: #5d6c7b; margin: 0;">Metro Line 1 (Versova &ndash; Andheri &ndash; Ghatkopar). Just a 5-minute walk or 2-minute auto along Saki Vihar Road.</p>
+                                            <p style="font-size: 14px; line-height: 1.6; color: #5d6c7b; margin: 0;">Metro Line 1 (Versova &ndash; Andheri &ndash; Ghatkopar). Just a 5-minute walk or a 2-minute auto ride along Saki Vihar Road.</p>
                                         </div>
 
                                         <!-- Distance Card 2: Airport -->
-                                        <div class="transit-strip-box" style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: #f7fafb; border: 1px solid rgba(36, 163, 177, 0.16); border-radius: 18px; padding: 22px 24px; box-sizing: border-box; transition: transform 0.2s ease, border-color 0.2s ease;">
-                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-                                                <div style="font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 600; color: #011f23;">✈️ Mumbai Airport (T2)</div>
-                                                <span style="font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 600; padding: 5px 12px; background: rgba(36, 163, 177, 0.12); color: #24a3b1; border-radius: 20px;">2.2 KM &bull; 8-10 Mins</span>
+                                        <div data-w-id="transit-c2" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" class="transit-card-item">
+                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                                                <div style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23;">✈️ Mumbai Airport (T2)</div>
+                                                <span style="font-family: 'Sora', sans-serif; font-size: 12.5px; font-weight: 600; padding: 6px 14px; background: rgba(36, 163, 177, 0.12); color: #24a3b1; border-radius: 20px;">2.2 KM &bull; 8-10 Mins</span>
                                             </div>
-                                            <p style="font-size: 13.5px; line-height: 1.55; color: #5d6c7b; margin: 0;">Chhatrapati Shivaji Maharaj International Airport (Terminal 2). Extremely close via Andheri-Kurla / Saki Vihar corridor.</p>
+                                            <p style="font-size: 14px; line-height: 1.6; color: #5d6c7b; margin: 0;">Chhatrapati Shivaji Maharaj International Airport (Terminal 2). Extremely close via Andheri-Kurla / Saki Vihar corridor.</p>
                                         </div>
 
                                         <!-- Distance Card 3: Railway -->
-                                        <div class="transit-strip-box" style="flex: 1; display: flex; flex-direction: column; justify-content: center; background: #f7fafb; border: 1px solid rgba(36, 163, 177, 0.16); border-radius: 18px; padding: 22px 24px; box-sizing: border-box; transition: transform 0.2s ease, border-color 0.2s ease;">
-                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 8px;">
-                                                <div style="font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 600; color: #011f23;">🚆 Andheri Railway Station</div>
-                                                <span style="font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 600; padding: 5px 12px; background: rgba(36, 163, 177, 0.12); color: #24a3b1; border-radius: 20px;">4.0 KM &bull; Direct Metro</span>
+                                        <div data-w-id="transit-c3" style="-webkit-transform:translate3d(0, 20%, 0) scale3d(1, 1, 1);transform:translate3d(0, 20%, 0);opacity:0" class="transit-card-item">
+                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 8px;">
+                                                <div style="font-family: 'Sora', sans-serif; font-size: 18px; font-weight: 600; color: #011f23;">🚆 Andheri Railway Station</div>
+                                                <span style="font-family: 'Sora', sans-serif; font-size: 12.5px; font-weight: 600; padding: 6px 14px; background: rgba(36, 163, 177, 0.12); color: #24a3b1; border-radius: 20px;">4.0 KM &bull; Direct Metro</span>
                                             </div>
-                                            <p style="font-size: 13.5px; line-height: 1.55; color: #5d6c7b; margin: 0;">Western &amp; Harbour suburban lines. Direct single-line metro transfer from Andheri Station straight to Sakinaka.</p>
+                                            <p style="font-size: 14px; line-height: 1.6; color: #5d6c7b; margin: 0;">Western &amp; Harbour suburban lines. Direct single-line metro transfer from Andheri Station straight to Sakinaka.</p>
                                         </div>
                                     </div>
                                 </div>
